@@ -12,17 +12,20 @@ export type Img = { src: string; width: number; height: number };
 type Manifest = Record<string, { name: string; w: number; h: number }>;
 const MAP = manifest as Manifest;
 
-/** Placeholder used if content references a path the pipeline hasn't built. */
-const MISSING: Img = { src: '/img/logo.webp', width: 183, height: 68 };
-
-/** Resolve an upstream uploads path to the locally optimised asset. */
+/**
+ * Resolve an upstream uploads path to the locally optimised asset.
+ *
+ * Throws on an unknown path rather than falling back to a placeholder: every
+ * page is statically generated, so a missing entry fails the build loudly
+ * instead of silently shipping the wrong picture.
+ */
 export function img(upstreamPath: string): Img {
   const hit = MAP[upstreamPath];
   if (!hit) {
-    if (process.env.NODE_ENV !== 'production') {
-      console.warn(`[images] no local asset for "${upstreamPath}" — run \`npm run images\``);
-    }
-    return MISSING;
+    throw new Error(
+      `[images] no local asset for "${upstreamPath}". ` +
+        `Add it to ASSETS in scripts/fetch-images.mjs and run \`npm run images\`.`
+    );
   }
   return { src: `/img/${hit.name}`, width: hit.w, height: hit.h };
 }

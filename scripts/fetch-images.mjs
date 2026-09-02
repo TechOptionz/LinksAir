@@ -3,10 +3,11 @@
  * WordPress host, resizes it to the size it is actually displayed at and
  * re-encodes to WebP under public/img/.
  *
- * Run with `npm run images`. Safe to re-run: existing outputs are skipped
- * unless you pass --force.
+ * Output filenames carry a content hash so public/img can be served immutable.
+ * Re-running rebuilds everything from scratch (~40 images, under a minute).
  */
-import { mkdir, writeFile, readFile, access } from 'node:fs/promises';
+import { mkdir, writeFile, readdir, rm } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
@@ -14,7 +15,6 @@ import sharp from 'sharp';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = join(ROOT, 'public', 'img');
 const UP = 'https://linksairelectrical.com.au/wp-content/uploads/';
-const FORCE = process.argv.includes('--force');
 
 /* Presets keyed to how each image is actually rendered.
    width is the largest CSS px the slot ever reaches, x2 for retina. */
@@ -36,6 +36,9 @@ const ASSETS = [
   ['2024/09/20211027_111742.jpg', 'hero'],
   ['2024/09/20220621_142833.jpg', 'hero'],
   ['2025/04/DaikinDuctedSystem_14kw.webp', 'hero'],
+  // Same file also lives under 2024/09 and is referenced by GALLERY; identical
+  // bytes hash to the same output name, so this just adds a second manifest key.
+  ['2024/09/DaikinDuctedSystem_14kw.webp', 'hero'],
   ['2025/04/Ducted-aircon-zoning.jpg', 'hero'],
   ['2024/09/Samsung-duct-S2_-ducted-outdoor-unit-AC120TXAPKG_SA_800x.webp', 'hero'],
   ['2024/09/6-outlets-900x442-1.jpg', 'hero'],
@@ -76,12 +79,14 @@ const ASSETS = [
   ['2025/05/logo-8.jpg', 'logo'],
 ];
 
-/** upstream path -> flat local basename, e.g. 2024/09/Cooktop.png -> cooktop.webp */
-export const localName = (p) =>
+/** upstream path -> flat local stem, e.g. 2024/09/Cooktop.png -> cooktop */
+export const localStem = (p) =>
   p.split('/').pop().replace(/\.[a-z0-9.]+$/i, '').toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') + '.webp';
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
-const exists = (p) => access(p).then(() => true, () => false);
+/** Assets are served with `immutable`, so the filename must change when the
+ *  bytes change - hence the content hash. */
+const hash8 = (buf) => createHash('sha256').update(buf).digest('hex').slice(0, 8);
 
 async function grab(path) {
   const res = await fetch(UP + path);
@@ -113,22 +118,14 @@ async function flatten(src) {
 
 async function run() {
   await mkdir(OUT, { recursive: true });
+  // Filenames are content-hashed, so stale ones would linger forever - clear first.
+  for (const f of await readdir(OUT)) await rm(join(OUT, f));
+
   const manifest = {};
-  let before = 0, after = 0, built = 0, skipped = 0;
+  let before = 0, after = 0, built = 0;
 
   for (const [path, presetName] of ASSETS) {
     const preset = PRESET[presetName];
-    const name = localName(path);
-    const dest = join(OUT, name);
-
-    if (!FORCE && (await exists(dest))) {
-      const buf = await readFile(dest);
-      const meta = await sharp(buf).metadata();
-      manifest[path] = { name, w: meta.width, h: meta.height };
-      after += buf.length;
-      skipped++;
-      continue;
-    }
 
     const src = await grab(path);
     const still = await flatten(src);
@@ -138,7 +135,8 @@ async function run() {
       .webp({ quality: preset.q, effort: 6, alphaQuality: 90 })
       .toBuffer();
     const meta = await sharp(out).metadata();
-    await writeFile(dest, out);
+    const name = `${localStem(path)}.${hash8(out)}.webp`;
+    await writeFile(join(OUT, name), out);
 
     manifest[path] = { name, w: meta.width, h: meta.height };
     before += src.length;
@@ -157,9 +155,8 @@ async function run() {
     join(ROOT, 'lib', 'images.generated.json'),
     JSON.stringify(manifest, null, 2) + '\n'
   );
-
-  console.log(`\nbuilt ${built}, skipped ${skipped}`);
-  if (built) console.log(`downloaded ${(before / 1048576).toFixed(2)}MB -> wrote ${(after / 1048576).toFixed(2)}MB`);
+  console.log(`
+built ${built} assets: ${(before / 1048576).toFixed(2)}MB downloaded -> ${(after / 1048576).toFixed(2)}MB written`);
 }
 
 run().catch((e) => { console.error(e); process.exit(1); });
