@@ -1,4 +1,5 @@
 import raw from '@/data/site-content.json';
+import { img as asset, type Img } from './images';
 
 /* ============ site feature flags (same defaults as the original) ============ */
 export const SITE = { showOffer: true, stickyBar: true, chatbot: true };
@@ -33,7 +34,8 @@ export type Shaped = Block & {
 };
 
 /* ============ constants ported 1:1 from the template ============ */
-export const UP = 'https://linksairelectrical.com.au/wp-content/uploads/';
+/* Images are keyed by their original WordPress uploads path; the real files
+   live in public/img/ and are resolved via asset() from lib/images.ts. */
 
 export const TITLES: Record<string, string> = {
   'home': 'Home', 'ac-services': 'Air Conditioning Services', 'ducted-airconditioning': 'Ducted Air Conditioning', 'electrical-services': 'Electrical Services',
@@ -93,7 +95,7 @@ export const TESTIMONIALS = [
 
 export const GALLERY: [string, string][] = [['2024/09/gallery_img2.jpg', 'Split system install, Brisbane'], ['2024/09/DaikinDuctedSystem_14kw.webp', 'Daikin 14kW ducted system'], ['2024/09/EV-Charger.png', 'EV charger installation, Oxley'], ['2024/09/AirTouch5.png', 'AirTouch 5 zone controller'], ['2024/09/Cooktop.png', 'Cooktop installation'], ['2024/09/Screenshot_20250420_141657_Photos2.jpg', 'Aircon installation, Springfield'], ['2024/09/Tripple-installation.jpg', 'Triple outdoor unit installation'], ['2024/09/15.jpg', 'Ducted air conditioning, Capalaba'], ['2024/09/20210804_185147-scaled.jpg', 'Ducted system, Wynnum'], ['2024/09/NICEIC.jpg', 'Switchboard upgrade, Woolloongabba'], ['2024/09/LED_lights.jpeg', 'Downlights, Teneriffe'], ['2024/09/Fan-Pic-04.jpg.webp', 'Ceiling fan installation']];
 
-export const BRANDS: [string, string][] = [['2025/05/logo-4.webp', 'Hisense'], ['2025/05/logo-3.webp', 'TECO'], ['2025/05/logo-2.webp', 'Daikin'], ['2025/05/logo-1.webp', 'Mitsubishi Electric'], ['2025/05/logo-5.png', 'Fujitsu'], ['2025/05/logo-6.png', 'Mitsubishi Heavy Industries'], ['2025/05/logo-7.png', 'ActronAir'], ['2025/05/logo-8.jpg', 'Panasonic']];
+export const BRANDS: [string, string][] = [['2025/05/logo-4.webp', 'Hisense'], ['2025/05/logo-3.webp', 'TECO'], ['2025/05/logo-2.webp', 'Daikin'], ['2025/05/logo-1.webp', 'Mitsubishi Heavy Industries'], ['2025/05/logo-5.png', 'Fujitsu'], ['2025/05/logo-6.png', 'Mitsubishi Electric'], ['2025/05/logo-7.png', 'ActronAir'], ['2025/05/logo-8.jpg', 'Panasonic']];
 
 export const HOME_FAQ = [
   { q: 'Are you licensed and insured?', a: 'Yes, all our technicians are fully licensed and insured for both electrical and aircon work.' },
@@ -155,7 +157,7 @@ export type ContentModel = {
   blocks: Shaped[];
   isThin: boolean;
   hasImg: boolean;
-  img: string;
+  img: Img | null;
   imgAlt: string;
   hasParent: boolean;
   parentHref: string;
@@ -189,14 +191,14 @@ export function contentModel(slug: string): ContentModel {
         ? (parent.item.groups || []).flatMap((g) => (g.href ? [{ label: g.label, href: g.href, slug: g.href.slice(1) }] : g.children))
         : [];
   const related = parent ? (parent.item.groups || []).flatMap((g) => g.children).filter((x) => x.slug !== src.slug).slice(0, 6) : [];
-  const img = IMGS[src.slug];
+  const imgKey = IMGS[src.slug];
   return {
     title: titleOf(src),
     intro,
     blocks: shape(blocks),
     isThin: blocks.length < 6,
-    hasImg: !!img,
-    img: img ? UP + img : '',
+    hasImg: !!imgKey,
+    img: imgKey ? asset(imgKey) : null,
     imgAlt: (src.images && src.images[0]) || titleOf(src),
     hasParent: !!parent,
     parentHref: parent ? parent.item.href : '',
@@ -279,9 +281,9 @@ export function areaCards() {
 export const TRUST_STATS = [{ v: '5.0 ★', l: '200+ Google reviews' }, { v: '2014', l: 'Serving Brisbane since' }, { v: '24/7', l: 'On call for emergencies' }, { v: '100%', l: 'Licensed & insured' }, { v: '$0', l: 'Hidden charges' }];
 
 export const PILLARS = [
-  { title: 'Air Conditioning Services', text: 'Supply, installation, repairs and maintenance of split system, multi-head and ducted air conditioners across Brisbane & Gold Coast.', href: '/ac-services', img: UP + '2024/09/split_innerimg01.jpg', alt: 'Air conditioning installation', short: 'air conditioning' },
-  { title: 'Electrical Services', text: 'Licensed residential and commercial electricians for lighting, power points, switchboards, safety switches, EV chargers and emergency repairs.', href: '/electrical-services', img: UP + '2024/10/residential_innerimg1.jpg', alt: 'Electrical services', short: 'electrical' },
-  { title: 'Building & Construction', text: 'Complete electrical for new house builds, working with builders from under-slab to rough-in to fit-off, plus air conditioning wiring.', href: '/building-and-construction', img: UP + '2024/09/builder_innerimg001.jpg', alt: 'Electrical for new builds', short: 'new builds' },
+  { title: 'Air Conditioning Services', text: 'Supply, installation, repairs and maintenance of split system, multi-head and ducted air conditioners across Brisbane & Gold Coast.', href: '/ac-services', img: asset('2024/09/split_innerimg01.jpg'), alt: 'Air conditioning installation', short: 'air conditioning' },
+  { title: 'Electrical Services', text: 'Licensed residential and commercial electricians for lighting, power points, switchboards, safety switches, EV chargers and emergency repairs.', href: '/electrical-services', img: asset('2024/10/residential_innerimg1.jpg'), alt: 'Electrical services', short: 'electrical' },
+  { title: 'Building & Construction', text: 'Complete electrical for new house builds, working with builders from under-slab to rough-in to fit-off, plus air conditioning wiring.', href: '/building-and-construction', img: asset('2024/09/builder_innerimg001.jpg'), alt: 'Electrical for new builds', short: 'new builds' },
 ];
 
 export const WHAT_WE_DO = [{ n: '01', t: 'General electrical work (lights, fans, power points)', href: '/general-electrical-maintenance' }, { n: '02', t: 'Switchboard upgrades & safety checks', href: '/electrical-switchboard-upgrade' }, { n: '03', t: 'Indoor & outdoor lighting installations', href: '/led-lights-installation' }, { n: '04', t: 'Split system & ducted air conditioning installs', href: '/split-system-aircon' }, { n: '05', t: 'Air conditioning servicing & maintenance', href: '/service-maintenance' }, { n: '06', t: 'Oven, cooktop & appliance installation', href: '/oven-and-cooktop-installations' }, { n: '07', t: 'Ceiling fan installations', href: '/ceiling-fan-installation' }, { n: '08', t: 'Emergency electrical repairs', href: '/electrical-services' }];

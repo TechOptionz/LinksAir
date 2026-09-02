@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { sx } from '@/lib/sx';
 import { EXPECT, type ContentModel } from '@/lib/content';
 import QuoteButton from './QuoteButton';
@@ -42,8 +43,15 @@ export default function ContentArticle({ page }: { page: ContentModel }) {
             </div>
           </div>
           {page.hasImg ? (
-            <div style={sx('aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:#0E5F97;box-shadow:0 24px 60px rgba(8,30,55,.3);max-height:380px')}>
-              <img src={page.img} alt={page.imgAlt} style={sx('width:100%;height:100%;object-fit:cover;display:block')} />
+            <div style={sx('aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:#0E5F97;box-shadow:0 24px 60px rgba(8,30,55,.3);max-height:380px;position:relative')}>
+              <Image
+                src={page.img!.src}
+                alt={page.imgAlt}
+                fill
+                priority
+                sizes="(max-width: 900px) 100vw, 560px"
+                style={sx('object-fit:cover')}
+              />
             </div>
           ) : (
             <div style={sx('aspect-ratio:4/3;max-height:380px;border-radius:18px;border:1px dashed rgba(255,255,255,.5);background:repeating-linear-gradient(135deg,rgba(255,255,255,.08) 0 12px,transparent 12px 24px);display:flex;align-items:center;justify-content:center;text-align:center;padding:20px')}>

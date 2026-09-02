@@ -1,13 +1,15 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { sx } from '@/lib/sx';
 import { NAV, NAV_SHORT } from '@/lib/content';
+import { img } from '@/lib/images';
 import { useQuote } from './QuoteContext';
 
-const LOGO = 'https://linksairelectrical.com.au/wp-content/uploads/2024/09/logo.png';
+const LOGO = img('2024/09/logo.png');
 
 export default function Header({
   menuOpen,
@@ -32,7 +34,7 @@ export default function Header({
     <header style={sx('background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 1px 0 #E1E8F0')} onMouseLeave={() => setOpenMenu(null)}>
       <div style={sx('max-width:1220px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px')}>
         <Link href="/" aria-label="Links Air & Electrical home" style={sx('display:flex;align-items:center;flex-shrink:0')}>
-          <img src={LOGO} alt="Links Air & Electrical" style={sx('height:46px;width:auto;display:block')} />
+          <Image {...LOGO} alt="Links Air & Electrical" priority style={sx('height:46px;width:auto;display:block')} />
         </Link>
 
         {/* desktop nav */}

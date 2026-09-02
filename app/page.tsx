@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { sx } from '@/lib/sx';
 import {
-  AREAS, BRANDS, EXPECT, GALLERY, HOME_FAQ, PILLARS, SITE, TESTIMONIALS, TITLES, TRUST_STATS, UP, USPS, WHAT_WE_DO,
+  AREAS, BRANDS, EXPECT, GALLERY, HOME_FAQ, PILLARS, SITE, TESTIMONIALS, TITLES, TRUST_STATS, USPS, WHAT_WE_DO,
 } from '@/lib/content';
+import { img } from '@/lib/images';
 import QuoteButton from '@/components/QuoteButton';
 import { HeroQuoteForm } from '@/components/forms';
 
@@ -58,7 +60,13 @@ export default function Home() {
           {PILLARS.map((p) => (
             <Link key={p.href} href={p.href} className="hv-lift" style={sx('background:#fff;border:1px solid #E1E8F0;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;color:#14263A;transition:transform .2s,box-shadow .2s')}>
               <div style={sx('aspect-ratio:16/9;background:#DCE6EF;overflow:hidden;position:relative')}>
-                <img src={p.img} alt={p.alt} loading="lazy" style={sx('width:100%;height:100%;object-fit:cover;display:block')} />
+                <Image
+                  src={p.img.src}
+                  alt={p.alt}
+                  fill
+                  sizes="(max-width: 700px) 100vw, (max-width: 1220px) 50vw, 393px"
+                  style={sx('object-fit:cover')}
+                />
               </div>
               <div style={sx('padding:22px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1')}>
                 <h3 style={sx('font-size:23px;font-weight:700')}>{p.title}</h3>
@@ -169,7 +177,14 @@ export default function Home() {
         <div style={sx('display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,180px),1fr));gap:10px')}>
           {GALLERY.map(([s, a]) => (
             <figure key={s} style={sx('margin:0;aspect-ratio:1;border-radius:12px;overflow:hidden;background:#DCE6EF;position:relative')}>
-              <img src={UP + s} alt={a} loading="lazy" style={sx('width:100%;height:100%;object-fit:cover;display:block')} />
+              <Image
+                src={img(s).src}
+                alt={a}
+                fill
+                loading="lazy"
+                sizes="(max-width: 420px) 340px, 240px"
+                style={sx('object-fit:cover')}
+              />
               <figcaption style={sx('position:absolute;left:0;right:0;bottom:0;padding:8px 10px;font-size:12px;color:#fff;background:linear-gradient(transparent,rgba(14,42,71,.8))')}>{a}</figcaption>
             </figure>
           ))}
@@ -211,7 +226,13 @@ export default function Home() {
         <div style={sx('display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;align-items:center')}>
           {BRANDS.map(([s, a]) => (
             <div key={s} style={sx('background:#fff;border:1px solid #E1E8F0;border-radius:12px;height:72px;display:flex;align-items:center;justify-content:center;padding:12px')}>
-              <img src={UP + s} alt={a} loading="lazy" style={sx('max-height:40px;max-width:100%;object-fit:contain')} />
+              <Image
+                {...img(s)}
+                alt={a}
+                loading="lazy"
+                sizes="160px"
+                style={sx('max-height:40px;width:auto;height:auto;max-width:100%;object-fit:contain')}
+              />
             </div>
           ))}
         </div>
