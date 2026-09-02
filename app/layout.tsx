@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Chrome from '@/components/Chrome';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: {
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>
         <Chrome>{children}</Chrome>
+        <Analytics />
       </body>
     </html>
   );
