@@ -1,0 +1,47 @@
+/* ===== Base styles — copied verbatim from the original template ===== */
+html,body{margin:0;padding:0;background:#F4F7FA;color:#14263A;font-family:'Nunito Sans',system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+*{box-sizing:border-box}
+a{color:#1279BF;text-decoration:none}
+a:hover{color:#0E5F97}
+h1,h2,h3,h4{font-family:'Barlow',system-ui,sans-serif;margin:0;line-height:1.15;text-wrap:pretty}
+p{margin:0}
+ul,ol{margin:0;padding-left:22px}
+input,select,textarea,button{font-family:inherit;font-size:16px}
+details summary{list-style:none;cursor:pointer}
+details summary::-webkit-details-marker{display:none}
+@keyframes lae-fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes lae-pulse{0%,100%{box-shadow:0 0 0 0 rgba(120,183,42,.55)}70%{box-shadow:0 0 0 12px rgba(120,183,42,0)}}
+
+/* ===== Hover styles (ported from the template's style-hover attributes) ===== */
+.hv-w:hover{color:#fff!important}
+.hv-g:hover{color:#78B72A!important}
+.hv-bb:hover{color:#1279BF!important;background:#F0F6FB!important}
+.hv-bd:hover{color:#0E5F97!important}
+.hv-redd:hover{background:#C4161C!important}
+.hv-mint:hover{background:#EAF7DC!important}
+.hv-lift:hover{transform:translateY(-4px)!important;box-shadow:0 20px 40px rgba(14,42,71,.12)!important;color:#14263A!important}
+.hv-bord:hover{border-color:#1279BF!important;color:#1279BF!important}
+.hv-navy:hover{background:#14385F!important}
+.hv-lime:hover{color:#9BE04A!important}
+.hv-gd:hover{background:#5F9A1C!important}
+.hv-b:hover{color:#1279BF!important}
+.hv-card:hover{border-color:#1279BF!important;box-shadow:0 16px 36px rgba(14,42,71,.1)!important;color:#14263A!important}
+.hv-bo:hover{border-color:#1279BF!important}
+.hv-bgb:hover{background:#1279BF!important}
+.hv-bgg:hover{background:#78B72A!important}
+.hv-inv:hover{background:#1279BF!important;color:#fff!important}
+
+/* ===== Responsive visibility (replaces the original's JS width checks) =====
+   isDesktop = width >= 1024, isWide = width >= 1200 */
+@media (max-width: 1023.98px){.lae-desktop{display:none!important}}
+@media (min-width: 1024px){.lae-mobile{display:none!important}}
+@media (max-width: 1199.98px){.lae-wide{display:none!important}}
+
+/* content grid: 'minmax(0,1fr) 360px' on desktop, single column on mobile */
+.lae-content-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:40px;align-items:start}
+@media (min-width: 1024px){.lae-content-grid{grid-template-columns:minmax(0,1fr) 360px}}
+
+/* chatbot dock: bottom 92px above the mobile sticky bar, 20px on desktop */
+.lae-chat-dock{position:fixed;right:16px;z-index:80;display:flex;flex-direction:column;align-items:flex-end;gap:12px;bottom:92px}
+@media (min-width: 1024px){.lae-chat-dock{bottom:20px}}
+.lae-chat-dock.no-sticky{bottom:20px}
