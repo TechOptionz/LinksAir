@@ -1,16 +1,21 @@
 import raw from '@/data/site-content.json';
 import { img as asset, type Img } from './images';
+import { AREAS, NAV, c, type NavChild, type NavGroup, type NavItem } from './site';
 
-/* ============ site feature flags (same defaults as the original) ============ */
-export const SITE = { showOffer: true, stickyBar: true, chatbot: true };
+export * from './site';
 
 /* ============ types ============ */
 export type Block = {
-  t: 'p' | 'h' | 'ul' | 'ol' | 'kv' | 'faq';
+  t: 'p' | 'h' | 'ul' | 'ol' | 'kv' | 'faq' | 'img' | 'table';
   text?: string;
   lvl?: number;
   items?: any[];
-  rows?: [string, string][];
+  rows?: string[][];
+  /** img: manifest key (see lib/images.ts) + alt text */
+  src?: string;
+  alt?: string;
+  /** table: optional header row; body rows live in `rows` */
+  head?: string[] | null;
 };
 export type Entry = {
   title: string;
@@ -19,6 +24,10 @@ export type Entry = {
   blocks: Block[];
   images?: string[];
   date?: string;
+  /** manifest key of the hero image; overrides the IMGS lookup below */
+  hero?: string;
+  /** hero strap-line; when absent the first long paragraph is used */
+  intro?: string;
 };
 
 export type Shaped = Block & {
@@ -29,8 +38,11 @@ export type Shaped = Block & {
   isOl: boolean;
   isKv: boolean;
   isFaq: boolean;
+  isImg: boolean;
+  isTable: boolean;
   steps?: { n: number; text: string }[];
   kvRows?: { k: string; v: string }[];
+  img?: Img;
 };
 
 /* ============ constants ported 1:1 from the template ============ */
@@ -42,6 +54,7 @@ export const TITLES: Record<string, string> = {
   'meter-box-relocation-upgrade': 'Meter Box Relocation & Upgrade', 'power-point-installation': 'Power Point Installation', 'vrv-vrf-air-conditioning': 'VRV / VRF Air Conditioning',
   'split-and-multi-head-system': 'Split & Multi-Head Systems', 'ducted-multi-zone-air-conditioning': 'Ducted Multi Zone Air Conditioning', 'building-and-construction': 'Building & Construction',
   'repair-installation': 'Repair & Installation', 'service-maintenance': 'Service & Maintenance', 'thank-you': 'Thank You', 'terms-conditions': 'Terms & Conditions', 'about-us': 'About Us',
+  'security-and-ev': 'Security & EV',
 };
 
 export const IMGS: Record<string, string> = {
@@ -51,36 +64,8 @@ export const IMGS: Record<string, string> = {
   'ac-services': '2024/09/ActronAir_Stacked-scaled.jpg', 'split-and-multi-head-system': '2024/09/Multihead-8Kw-scaled.jpg', 'electrical-services': '2024/09/builder_innerimg001.jpg', 'residential-electrician': '2024/10/residential_innerimg1.jpg',
   'data-points-and-network-cabling': '2024/10/data_pointsinnerimg1.jpg', 'downlights': '2024/09/LED_lights.jpeg', 'led-lights-installation': '2024/09/kitchen-lighting-led-under-cabinet-light-bar.jpg', 'electrical-switchboard-upgrade': '2024/09/NICEIC.jpg',
   'ceiling-fan-installation': '2024/09/Fan-Pic-04.jpg.webp', 'ceiling-exhaust-fans': '2024/09/20210628_113722-scaled.jpg', 'oven-and-cooktop-installations': '2024/09/Cooktop.png', 'ev-charger-installation': '2024/09/EV-Charger.png',
-  'building-and-construction': '2024/09/builder_innerimg001.jpg', 'pendant-light-installer': '2024/09/download.jpg', 'bathroom-exhaust-heater-installations': '2024/09/Inspirasjon-bad-vatrom.jpg', 'about-us': '2024/09/20210311_141247_HDR-scaled.jpg',
+  'building-and-construction': '2024/09/builder_innerimg001.jpg', 'pendant-light-installer': '2024/09/download.jpg', 'bathroom-exhaust-heater-installations': '2024/09/Inspirasjon-bad-vatrom.jpg', 'about-us': 'docs/about-us-1.png',
 };
-
-export type NavChild = { label: string; href: string; slug: string };
-export type NavGroup = { label: string; href: string | null; children: NavChild[] };
-export type NavItem = { label: string; href: string; key?: string; groups?: NavGroup[] };
-
-export const c = (label: string, slug: string): NavChild => ({ label, href: '/' + slug, slug });
-
-export const NAV: NavItem[] = [
-  { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/about-us' },
-  { label: 'Air Conditioning', href: '/ac-services', key: 'ac', groups: [
-    { label: 'Split System Aircon', href: '/split-system-aircon', children: [c('Back to Back Installation', 'back-to-back-installation'), c('Side Entry Installation', 'side-entry-installation'), c('Up & Over Installation', 'up-over-installation'), c('Split & Multi-Head Systems', 'split-and-multi-head-system')] },
-    { label: 'Ducted Air Conditioning', href: '/ducted-airconditioning', children: [c('Ducted Multi Zone', 'ducted-multi-zone-air-conditioning'), c('VRV / VRF Air Conditioning', 'vrv-vrf-air-conditioning'), c('Design and Construction', 'design-and-construction')] },
-    { label: 'Install, Repair & Service', href: '/air-conditioning-installation', children: [c('Air Conditioning Installation', 'air-conditioning-installation'), c('Repair & Installation', 'repair-installation'), c('Service & Maintenance', 'service-maintenance'), c('Air Conditioning FAQ', 'faq')] },
-  ] },
-  { label: 'Electrical', href: '/electrical-services', key: 'el', groups: [
-    { label: 'Residential Electrician', href: '/residential-electrician', children: [c('New House Wiring', 'new-house-wiring'), c('Bathroom Exhaust Heater Installations', 'bathroom-exhaust-heater-installations'), c('Ceiling Exhaust Fans', 'ceiling-exhaust-fans'), c('Ceiling Fan Installation', 'ceiling-fan-installation'), c('Data Points & Network Cabling', 'data-points-and-network-cabling'), c('Downlights', 'downlights'), c('Electrical Switchboard Upgrade', 'electrical-switchboard-upgrade')] },
-    { label: 'General Electrical Maintenance', href: '/general-electrical-maintenance', children: [c('LED Lights Installation', 'led-lights-installation'), c('Meter Box Relocation & Upgrade', 'meter-box-relocation-upgrade'), c('Oven & Cooktop Installations', 'oven-and-cooktop-installations'), c('Pendant Light Installer', 'pendant-light-installer'), c('Power Point Installation', 'power-point-installation'), c('Smoke Detector Installation', 'smoke-detector-installation'), c('Switchboard Surge Protector', 'switchboard-surge-protector-installation'), c('USB Sockets', 'usb-sockets'), c('Other Electrical Services', 'other-electrical-services')] },
-    { label: 'Security & EV', href: null, children: [c('CCTV Camera Installation', 'cctv-camera-installation'), c('Security Camera Installation', 'security-camera-installation'), c('EV Charger Installation', 'ev-charger-installation')] },
-  ] },
-  { label: 'Building & Construction', href: '/building-and-construction' },
-  { label: 'Areas', href: '/service-area', key: 'areas', groups: [{ label: 'Service areas', href: '/service-area', children: [c('Brisbane', 'brisbane'), c('Gold Coast', 'gold-coast'), c('Logan', 'logan'), c('Ipswich', 'ipswich')] }] },
-  { label: 'Blog', href: '/our-blog' },
-];
-
-export const NAV_SHORT: Record<string, string> = { 'About Us': 'About', 'Air Conditioning': 'Air Con', 'Building & Construction': 'Building' };
-
-export const AREAS = ['brisbane', 'gold-coast', 'logan', 'ipswich'];
 
 export const EXPECT = ['Fully licensed and insured technicians', 'On-time and tidy service', 'Clear quotes – no hidden fees', 'Australian standard compliance', 'Great communication from start to finish'];
 
@@ -126,8 +111,10 @@ export const titleOf = (p: Entry) => TITLES[p.slug] || p.title;
 /* ============ block shaping (verbatim port of shape()) ============ */
 export function shape(blocks: Block[]): Shaped[] {
   return (blocks || []).map((b) => {
-    const o: Shaped = { ...b, isH2: false, isH3: false, isP: false, isUl: false, isOl: false, isKv: false, isFaq: false };
+    const o: Shaped = { ...b, isH2: false, isH3: false, isP: false, isUl: false, isOl: false, isKv: false, isFaq: false, isImg: false, isTable: false };
     if (b.t === 'h') { if ((b.lvl ?? 2) <= 3) o.isH2 = true; else o.isH3 = true; }
+    else if (b.t === 'img') { o.isImg = true; o.img = asset(b.src!); }
+    else if (b.t === 'table') o.isTable = true;
     else if (b.t === 'p') { const short = (b.text || '').split(/\s+/).length <= 7 && !/[.!?,]$/.test(b.text || ''); if (short) { o.isH3 = true; } else o.isP = true; }
     else if (b.t === 'ul') o.isUl = true;
     else if (b.t === 'ol') { o.isOl = true; o.steps = (b.items || []).map((text: string, i: number) => ({ n: i + 1, text })); }
@@ -177,7 +164,7 @@ export function contentModel(slug: string): ContentModel {
       : { slug, title: '', blocks: [], images: [] });
   const blocks = src.blocks || [];
   const firstP = blocks.find((b) => b.t === 'p' && (b.text || '').split(/\s+/).length > 8);
-  let intro = firstP ? firstP.text! : 'Licensed, insured and local. Upfront quotes, tidy work and warranties on every job across Brisbane and the Gold Coast.';
+  let intro = src.intro || (firstP ? firstP.text! : 'Licensed, insured and local. Upfront quotes, tidy work and warranties on every job across Brisbane and the Gold Coast.');
   if (intro.length > 230) {
     const cut = intro.slice(0, 230);
     intro = cut.slice(0, Math.max(cut.lastIndexOf('. '), cut.lastIndexOf(', '), 120) + 1).trim();
@@ -191,7 +178,7 @@ export function contentModel(slug: string): ContentModel {
         ? (parent.item.groups || []).flatMap((g) => (g.href ? [{ label: g.label, href: g.href, slug: g.href.slice(1) }] : g.children))
         : [];
   const related = parent ? (parent.item.groups || []).flatMap((g) => g.children).filter((x) => x.slug !== src.slug).slice(0, 6) : [];
-  const imgKey = IMGS[src.slug];
+  const imgKey = src.hero || IMGS[src.slug];
   return {
     title: titleOf(src),
     intro,
@@ -269,6 +256,19 @@ export function allFaq() {
   return [...HOME_FAQ, ...((faqPage?.blocks || []).flatMap((b) => (b.t === 'faq' ? (b.items as { q: string; a: string }[]) : [])))];
 }
 
+/** FAQ page sections: the home-page basics first, then the FAQ page's own
+ *  headed groups (a heading block starts a group, faq blocks fill it). */
+export function faqGroups(): { label: string; intro: string[]; items: { q: string; a: string }[] }[] {
+  const groups: { label: string; intro: string[]; items: { q: string; a: string }[] }[] = [{ label: 'General', intro: [], items: [...HOME_FAQ] }];
+  let cur: (typeof groups)[number] | null = null;
+  for (const b of getPage('faq')?.blocks || []) {
+    if (b.t === 'h') { cur = { label: b.text || '', intro: [], items: [] }; groups.push(cur); }
+    else if (b.t === 'faq') { if (!cur) { cur = { label: 'Air conditioning', intro: [], items: [] }; groups.push(cur); } cur.items.push(...(b.items as { q: string; a: string }[])); }
+    else if (b.t === 'p' && b.text) { if (cur) cur.intro.push(b.text); else groups[0].intro.push(b.text); }
+  }
+  return groups.filter((g) => g.items.length || g.intro.length);
+}
+
 export function areaCards() {
   return AREAS.map((s) => {
     const p = getPage(s);
@@ -299,10 +299,6 @@ export const CONTACT_CARDS = [
   { l: 'Email', v: 'info@linksairelectrical.com.au', href: 'mailto:info@linksairelectrical.com.au', target: '_self' },
   { l: 'Service area', v: 'Brisbane & Gold Coast · On call 24/7', href: '/service-area', target: '_self' },
 ];
-
-export const FOOTER_AC = [c('Air Conditioning Services', 'ac-services'), c('Split System Aircon', 'split-system-aircon'), c('Ducted Air Conditioning', 'ducted-airconditioning'), c('Air Conditioning Installation', 'air-conditioning-installation'), c('Repair & Installation', 'repair-installation'), c('Service & Maintenance', 'service-maintenance'), c('Reviews', 'reviews')];
-export const FOOTER_EL = [c('Electrical Services', 'electrical-services'), c('Residential Electrician', 'residential-electrician'), c('Switchboard Upgrade', 'electrical-switchboard-upgrade'), c('General Electrical Maintenance', 'general-electrical-maintenance'), c('EV Charger Installation', 'ev-charger-installation'), c('CCTV Camera Installation', 'cctv-camera-installation'), c('Building & Construction', 'building-and-construction')];
-export const FOOTER_CO = [c('About Us', 'about-us'), c('Service Areas', 'service-area'), c('FAQ', 'faq'), c('Blog', 'our-blog'), c('Contact Us', 'contact-us')];
 
 /* ============ routing helpers ============ */
 const SPECIAL_ROUTES = ['home', 'contact-us', 'faq', 'our-blog', 'service-area', 'thank-you'];

@@ -1,0 +1,440 @@
+{
+  "docs/about-us-1.png": {
+    "name": "about-us-1.2aeee6d7.webp",
+    "w": 1024,
+    "h": 1024,
+    "blur": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQAgCdASoQABAAA4BaJZwAD5IQb/1XszQAAP73DpKFMPJM8tPD8vrzXdtfYF/NkFK1E7inQtNjvgJn6GUQz2YagKcHx4aye3pQK03ePcDi1qPNKZ1ltx9lXPpAzWzif8abXw1SgFFgQAAA"
+  },
+  "docs/ac-services-1.png": {
+    "name": "ac-services-1.0a1226d9.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoQAAsAA4BaJZwAD4osAbMj72eBAAD+6n++tK2/h5oLHekN+/7a20ZOM5pym9WxO010Hf0FxZ35nd8ZiJCUG9e2R5hS60meHxOAQqH6g2nnCeeenGT91FrsgAA="
+  },
+  "docs/ac-services-2.png": {
+    "name": "ac-services-2.55ca4572.webp",
+    "w": 1312,
+    "h": 1199,
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADQAQCdASoQAA8AA4BaJZwCdAEfYzQlIAD+8mUoG2eoFFQfm9q2CSDKFN5BXgxsntacoVVLpMrIVPrrINtyAiJAt1LzeOZOo+jXDHOjKXQo/EvU15eNetBP4Sc2AAAA"
+  },
+  "docs/air-conditioning-installation-1.png": {
+    "name": "air-conditioning-installation-1.452dcad3.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoQAAsAA4BaJYwAD43vv8/TYIIGEAD+6qhL7XLYN//J5QOyoLxD1Lef1AjMn9ZGTwTP8Tf+89HAwGZeWoQ6ZwPhXHsLpEcTkRbveFHrfRBuS+1ElkAMW0lAAAA="
+  },
+  "docs/air-conditioning-installation-2.png": {
+    "name": "air-conditioning-installation-2.f2a80938.webp",
+    "w": 1400,
+    "h": 1050,
+    "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABwAgCdASoQAAwAA4BaJYgCdAYsPvPcg+PeTG0AAP6yP1W6AW8AxByf/FycS0dHEOdAEhwp/Ya1w6J57orR81pBznjUU1kYRFW7MS7k5zi6+gtowY7dDmQ+AYROOiA0QwDwrZKI4gAAAA=="
+  },
+  "docs/back-to-back-installation-1.png": {
+    "name": "back-to-back-installation-1.503de1e6.webp",
+    "w": 1400,
+    "h": 787,
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACwAQCdASoQAAkAA4BaJaAC7ABrqR1YAP7qoVSe++QGnppxsVFTsLQwwUv1+DjvuP0mFDYwHRz+2np8WBbt/g1uKDk4wfKzD1YBGgtQo1ggAA=="
+  },
+  "docs/back-to-back-installation-2.png": {
+    "name": "back-to-back-installation-2.44c77b3f.webp",
+    "w": 1312,
+    "h": 1199,
+    "blur": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwAgCdASoQAA8AA4BaJagCdH8AFEPdqGxHYAD+lMMtwM/dYWli0MyYZqDEyWDdN5+Fm9AsRktnlpCp6/nDEP5BEjlVpgdsNz3fsCooMdiIK8Vrxw+B2wkF/o4D/Y10TC5Qa4eV9olgkuA/6uqKcAAA"
+  },
+  "docs/bathroom-exhaust-heater-installations-1.png": {
+    "name": "bathroom-exhaust-heater-installations-1.e3235856.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQAAkAA4BaJZwAAuso338i3d9gAP7v8nd0cHKRqfGvpHcKRxwkq16lONXyIy+CG6xcd5c5z1GmAAAA"
+  },
+  "docs/bathroom-exhaust-heater-installations-2.png": {
+    "name": "bathroom-exhaust-heater-installations-2.583529ec.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoQAAsAA4BaJaACdAEUlw9kmQAA/phcMh+h0jvPprv5+LGno1Mj9nxmMZiaIo1VfsOcYnXwc03OOwVpdZHnA7AKOi+x4MUYr1LFyXyDdyG/EAKfZgaAAA=="
+  },
+  "docs/cctv-camera-installation-1.png": {
+    "name": "cctv-camera-installation-1.186189d4.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADQAQCdASoQAAkAA4BaJZQAAm2rie6yQAD+65n0GTOoP7m67Uk+VNi/AI0MOH8wVp1q5n9LG1bwVbSiBLb388H9ZIUGxnYGluqQnbCnPP7vc1+GAAA="
+  },
+  "docs/cctv-camera-installation-2.png": {
+    "name": "cctv-camera-installation-2.4846335a.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQAgCdASoQAAkAA4BaJYwC7AYrnkuH/vCYpAAA/uJXwxA33k+vFIXOFRINcB2mFm0+oB57yFaEcpGrs4kYxXU1v9XWZUKdOw+PY4Hya6ndVZtsvG6AAA=="
+  },
+  "docs/ceiling-exhaust-fans-1.png": {
+    "name": "ceiling-exhaust-fans-1.d0186d38.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoQAAsAA4BaJZwAAp12TCTVAAD+85WZ8w3Tx/qc8HMNOHT7RivkNZe2EUtDbmfNK8xmLYmvV0dEWPHJXyBdN5A2g3eyWw+b3PCAAA=="
+  },
+  "docs/ceiling-exhaust-fans-2.png": {
+    "name": "ceiling-exhaust-fans-2.2a298a8d.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwAgCdASoQAAsAA4BaJQBOgCKV+vDmJ6OLQAD+sjIIcl7eVtviWIJe9sISQmXLebSyhljdZsv42lJKbQrNSgyEdXppdOMPjKwGmNXdNIRZFyW66jlKL1Bd0FmAIIdQSlRsZb/j2LgAAA=="
+  },
+  "docs/ceiling-fan-installation-1.png": {
+    "name": "ceiling-fan-installation-1.2d57a4cc.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAQCdASoQAAkAA4BaJQBdgBKGCwkAAP7q1HDpbSokxZXBkJiKB2OH/3aZrTRjn5WttP+bNN9saDPH2bPAZ/F6NqBm7rvpvbNuQH3W/K52oAAA"
+  },
+  "docs/ceiling-fan-installation-2.png": {
+    "name": "ceiling-fan-installation-2.cbc49de5.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAkAA4BaJQBOgCKlWLWORyAA/q8Vhffo1/jMcY3S7ubgIrssAnVWfX275Ui2Hy4P/Ez634cHwzdCLV0dS5wSQN3+QAAA"
+  },
+  "docs/data-points-and-network-cabling-1.png": {
+    "name": "data-points-and-network-cabling-1.8064d140.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABQAgCdASoQAAsAA4BaJYgCsAYsFoD29MbE2AAA/vIwBfM6l6AM06r60D/srG7EFS4JRzI1l/myKhmPmxLiE8rHKV0GNEYu/kkO/vw58Fu9D6SQGSxRi+JqSOLDsfpM14/NfSHdAYAAAA=="
+  },
+  "docs/data-points-and-network-cabling-2.png": {
+    "name": "data-points-and-network-cabling-2.a4a4e728.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoQAAsAA4BaJagCsAEUqpF4AFCjUAD+5/sMfDECOXL2JgVNR0APbm3UI2LaUpLQ+Difx0mfeo1X7QNYT9L2IOKbbmym9qRFa0TPo7LPetG9Wf+OleWrPsZAAAA="
+  },
+  "docs/design-and-construction-1.png": {
+    "name": "design-and-construction-1.dd165266.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwAgCdASoQAAsAA4BaJQBOgMVutbfo6I/oAAD+3W0GIOgJ1cxJPbomlr5r8Ct/rweZ8S6uYUa2on+o2KuFu9+LlEc7PHvlTUlvpRfMLrNv3WJIhXkBs6asN9vTfZEWz+ooIUAA"
+  },
+  "docs/design-and-construction-2.png": {
+    "name": "design-and-construction-2.57f11369.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoQAAsAA4BaJZQCdAD5LphgS6eAAP7zxJ5z6q9M8JO2dMqHs1Mh0R/Ov9YD23RcCSB2aZEz/iOyDeXdR4f+mNA+1/x2mJCoOWGegvkEWU4SYAAA"
+  },
+  "docs/downlights-1.png": {
+    "name": "downlights-1.bab957e6.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoQAAkAA4BaJQBOgBmZavfPsAD+1O+usXOeFsj4Y/7xwzi8kShAKwt9KsEsWVWDoMqt6mi8iBfalOG+BIsxotF0q0gBT1MAAAA="
+  },
+  "docs/downlights-2.png": {
+    "name": "downlights-2.cade1bc3.webp",
+    "w": 1400,
+    "h": 1050,
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoQAAwAA4BaJZACdAYt9yPcRJAAAP7x6Z1e7aXy4uQkzngjzdl5omcsKlQ9xy9THyYQBU5wg51uQ7FEB9SmuMIMEPojVkvMvZu4SEyg8RzIu1SxfGzu2AAA"
+  },
+  "docs/ducted-airconditioning-1.png": {
+    "name": "ducted-airconditioning-1.2c1b1371.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAkAA4BaJYwCdADwTO5vvUgA/mp76YhkRChdS/pQyq0j0vJ1Prli0TOpddjzked27JY9sYNweDwVRCXXYCzyAWjKAAAA"
+  },
+  "docs/ducted-airconditioning-2.png": {
+    "name": "ducted-airconditioning-2.0c170df6.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAkAA4BaJZwCdAEflAbm44AA/u/lyj2xORMThuSoeZSfRb+8a+aTXso9YEkvtPQJlfxXk6weiEjE2CDTatQAAAA="
+  },
+  "docs/ducted-multi-zone-air-conditioning-1.png": {
+    "name": "ducted-multi-zone-air-conditioning-1.c90b93be.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAQCdASoQAAkAA4BaJQBOgBee6FjgAP6yM7hb5Trl1d8PzgaBguPQII8o3WyosLhJzfYY0+94FiQ9W12oLZ9flW0RZ+g+Tfj74vigAAA="
+  },
+  "docs/ducted-multi-zone-air-conditioning-2.png": {
+    "name": "ducted-multi-zone-air-conditioning-2.38a46fef.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAkAA4BaJZQCdAEQTqUIIAD+8EIWYjGiTdEbnk8NCTAwhqRHCig497l1a3JB05FLtJ0tQNOx/W5toGaDdgWHXIq4eSAWgzwBpwAA"
+  },
+  "docs/electrical-switchboard-upgrade-1.png": {
+    "name": "electrical-switchboard-upgrade-1.65bd82c6.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQAgCdASoQAAsAA4BaJQBdgMWWykHp4sYddgAA/rhP2TBwRvCKyqjGyjLCOtpjlgP7F0/x+SFfBxUiGr8IL1JyCTEoMW+4Pye8P15KBJipnTohW41RhzAbDtiEkBFZHVHgAA=="
+  },
+  "docs/electrical-switchboard-upgrade-2.png": {
+    "name": "electrical-switchboard-upgrade-2.9ce43770.webp",
+    "w": 1400,
+    "h": 700,
+    "blur": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAwAgCdASoQAAgAA4BaJYwCdAYtzkjAYGBMAAD+84sdp6uwV867m2dfmr+OYIWTy5dhHKaFxZCpH/HWC6BI5PJXOa9H4xAA"
+  },
+  "docs/ev-charger-installation-1.png": {
+    "name": "ev-charger-installation-1.9cff5c14.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABQAgCdASoQAAsAA4BaJQBdgMW5oYxZ7dy74AAA/sYHEkV2o71UYO9Vl9GdFOuIX2MCflGrKNyQGZVvqV9x0n8ojV0WZ/17cnYS0T7wwQOLOXmU4QEgoz4ulhyRPHSIG+8druAA"
+  },
+  "docs/ev-charger-installation-2.png": {
+    "name": "ev-charger-installation-2.eb31ad37.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwAQCdASoQAAsAA4BaJZQCw7CVy7L6HAAA/a3mjH+iTDd7rUHSdwX5H2od83lgTinfA3NGcyXmyueMN59fQd/Hc6mfq+DlD8Xy9uFSGOLbgCTfr15ibUUOQM4dVsV7QF0oAAAA"
+  },
+  "docs/faq-1.png": {
+    "name": "faq-1.9058d9df.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACwAQCdASoQAAkAA4BaJZQAAfacJmOAAP7YUd+2JtijP70Pfyh/J9qwx2fziiSX9Be8iQPuyvAx/WIKuWP5dENIl7oS2mWnu3Rgffixwb7lFrACjMABDwAA"
+  },
+  "docs/faq-2.png": {
+    "name": "faq-2.ea2288db.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACwAQCdASoQAAkAA4BaJQBOgCHXXHRgAP7oAFWNYDXSVmFQhFz7L8GZ02Mvoig505cVBRb3VedzkD1MpPrx2RQw1o7bXBGGdYAAAA=="
+  },
+  "docs/general-electrical-maintenance-1.png": {
+    "name": "general-electrical-maintenance-1.1fa40901.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwAgCdASoQAAsAA4BaJYwC7H8AgoSn4Bv9AAD+7+Ukx2Cb61TesD6JF0LHzvHbRV8r7risReti+n4itoadTeXsuFmyv2mBD0Rss3KL3OVeb6zE7V+XABAKMDGNrIAA"
+  },
+  "docs/general-electrical-maintenance-2.png": {
+    "name": "general-electrical-maintenance-2.0f3b529c.webp",
+    "w": 1400,
+    "h": 700,
+    "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQAAgAA4BaJZwCdAEPAsEJgb5AAP7zhNqUxHkuyeKD1rPBWjIlxm5in3UFjgioAcw5Tbo8QDcyAAAA"
+  },
+  "docs/led-lights-installation-1.png": {
+    "name": "led-lights-installation-1.29a6926c.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQAgCdASoQAAsAA4BaJZQCw7Yv/jAKbxgAAP7nk+LwqjYjM9hewDlBWoZqHf44gRG6pYU0IVraDapbLg7rbC6SVZC7qgIBBEIzJYdlxfTMnUWNBjICkgGM4H7wJ2AzgAA="
+  },
+  "docs/led-lights-installation-2.png": {
+    "name": "led-lights-installation-2.b4a0c793.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoQAAsAA4BaJbACdACqwc6LS2YAAP3thla/JkNQ21V2iZ4Oc9VyrIxhMqpvxdrY3lj9nkYJoz5mQ0d3CPrLQvW4/q1xqBDo7Av3+Su4Y/dL30bkgAA="
+  },
+  "docs/meter-box-relocation-upgrade-1.png": {
+    "name": "meter-box-relocation-upgrade-1.62b0b1d7.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADwAQCdASoQAAsAA4BaJYwCdAYuHU2vT4AA/uKKb+t1DLAEvtGnpJ/cQV/BJfHW+zpHPrzXSjs+bETFbCh4+Jdcp3xfVMHn5T12W8rmECdIwaptY5lZvuD9AhWgtEf99Y5DlgisAAA="
+  },
+  "docs/meter-box-relocation-upgrade-2.png": {
+    "name": "meter-box-relocation-upgrade-2.01a635c7.webp",
+    "w": 1400,
+    "h": 700,
+    "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQAgCdASoQAAgAA4BaJYwCdAEPAZlAGoQAAP704axid6XBfLGKvDNhjVdhWAO4CVA+uARzKIevr/UeExKANmXPYW4AAA=="
+  },
+  "docs/new-house-wiring-1.png": {
+    "name": "new-house-wiring-1.e4fff5c6.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAkAA4BaJZACdAD8vpSBxjAA/sYE9wgTb2WLYVbR9Gdl0jE5gzQz8MR9PTdLzMAtPcdCbaTg12Yr0H8oVkB1zw1TwoguEpZbCUBLiWQAAA=="
+  },
+  "docs/new-house-wiring-2.png": {
+    "name": "new-house-wiring-2.0afc11db.webp",
+    "w": 1400,
+    "h": 1050,
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQAAwAA4BaJYgCdAD0a1LXEyAA/useONUppuZKdtyeNbAFMJpXT3QkFTkbiAJ862LkWW8/d0HC0gz3ViLv/U5ExDw2qUbiJiYAAA=="
+  },
+  "docs/other-electrical-services-1.png": {
+    "name": "other-electrical-services-1.925e2e3f.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAkAA4BaJZwAD4ivNIdLKG2gAP7wEpvlX1YBIA2cJnbf/2JoB3GsmqPcbMrw/OaQdOWa+GrcCJtfcshgTy68tPT2rwhEmFf87DpkwUAAAA=="
+  },
+  "docs/other-electrical-services-2.png": {
+    "name": "other-electrical-services-2.6b191968.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAkAA4BaJZQCw7EPAsBxt2AA/vcg0xadI2vIi4gemXYsXJ/Q+2BuTJUxYprLrZ0xyLHDJE1Z5FaGE+GHR9lpnxGowAAA"
+  },
+  "docs/oven-and-cooktop-installations-1.png": {
+    "name": "oven-and-cooktop-installations-1.259d4494.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABQAgCdASoQAAsAA4BaJaACdAYr7al/UVU2yAAA/u3uIVXzxSJ86R/fASGq5vRUsCqcRlM20izsfdG2tA06ZoQ3/cVCdVuFEBM46UBOg74FNlARZ0rMvpLTSHkR9FUCVj/lJZtpQOtjJr8AAAA="
+  },
+  "docs/oven-and-cooktop-installations-2.png": {
+    "name": "oven-and-cooktop-installations-2.d3006838.webp",
+    "w": 1400,
+    "h": 700,
+    "blur": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAABwAQCdASoQAAgAA4BaJZQCdAFAAAD+8lnO9OF889CXsANw3VItXyE3uSyvLz9F9whnytSbc8+AUAAA"
+  },
+  "docs/pendant-light-installer-1.png": {
+    "name": "pendant-light-installer-1.a81965a2.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAQCdASoQAAsAA4BaJYgCdAYqM7yO0VAA/tgeNaIc/uD+qyeQAkhKRjw4z2r74PvTJXKUEKSP4yFKJiJAOSLsaN2D4p9qKzih8+a2T2vN82otbJ0u1wl0dra4qWC2NiAAAA=="
+  },
+  "docs/pendant-light-installer-2.png": {
+    "name": "pendant-light-installer-2.9fb26160.webp",
+    "w": 1400,
+    "h": 700,
+    "blur": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACwAQCdASoQAAgAA4BaJZzuCtAABAYAAP7ySx0x4AyixuGIpYnlZ3IqlS3xpZHTsywgj/1Dzlb9QzJ8AAA="
+  },
+  "docs/power-point-installation-1.png": {
+    "name": "power-point-installation-1.98035421.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQAgCdASoQAAsAA4BaJQBOj+AQUYu1kImAAP7rJwHQOcSf2OACc20DcfuquWFEP8dDfWYeq9UN2cmi1CBXGZugn3iZlygrQgYCHWDhP5sU88IaL9SwxsUxq06TGHBApmqAAA=="
+  },
+  "docs/power-point-installation-2.png": {
+    "name": "power-point-installation-2.140fdf1e.webp",
+    "w": 1400,
+    "h": 700,
+    "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAABwAQCdASoQAAgAA4BaJZzuAACIAAD+8gqcLe2g+D7bdNOGsjfo7XyOiqcLmozxPbOlG8BNmYfoTyJ1AQAAAA=="
+  },
+  "docs/repair-installation-1.png": {
+    "name": "repair-installation-1.56d6df1c.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAwAgCdASoQAAsAA4BaJYgAFgBFxEEX4XtPAAD+8/DQW2BwNBvTfZAVTvIHe+ARlY6WvxIp4299aYyrkz/iAP2pWriyfy+r63lIHtMzzoqNg3Mk3DbjfEVneElxfUn6f5TlsZc6yiTawgAA"
+  },
+  "docs/repair-installation-2.png": {
+    "name": "repair-installation-2.2f867fee.webp",
+    "w": 1400,
+    "h": 1050,
+    "blur": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAwAgCdASoQAAwAA4BaJZgCdAYsZgdMBg+9AAD33/hlx4XnPySF/Mc+X3eJtgS4j9xqGgI2oP/bLfsJLf2aXQdfuHziCrVdiLKxFSdeu4zRJUVd8Ct96faCHdoOqmEKzMd1GqYsyROZNvQxPy5bSpqw+yFDCg74hZ+cP5eAAAA="
+  },
+  "docs/residential-electrician-1.png": {
+    "name": "residential-electrician-1.7da7fbb2.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQAgCdASoQAAkAA4BaJQBOgMX/o+iM/FMAAP7uWdrXqXr8iPr/KKluvdwI/nD1qfuiz5Hr0k58wbEqOtnAqulexbo0CTILSHmQaz8PJYRPeP6C/YVatusownoQO4EAAAA="
+  },
+  "docs/residential-electrician-2.png": {
+    "name": "residential-electrician-2.145488a3.webp",
+    "w": 1400,
+    "h": 1050,
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwAgCdASoQAAwAA4BaJQBOgMWW7dydHAvAAAD+6utZa9JYjXQK81CEOMduDj8q3oXE2iNye2+AjMlqjvT5hlsyGI3vi/xSbiVPHjU/Nd+br8BEAP2cIcOz7Axbc6UxMAAAAA=="
+  },
+  "docs/security-and-ev-1.png": {
+    "name": "security-and-ev-1.68f0c06f.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQAAkAA4BaJYwCdAEfgNUmZqdIAAD+15nL0BP2ifbLt0BXEBrRhw3xvJPe1gZiHr3NcPABMoYrvANA53E6g4qcSL7XYiEo0cToDnZtkeBwTQAA"
+  },
+  "docs/security-and-ev-2.png": {
+    "name": "security-and-ev-2.8ce5f8c0.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQAAkAA4BaJQBOgCIaVOcupAD+yjp2ku7Q3/oWpJmR7V1cKGEfN5mZW+MpXJrtKUODozHGi8VG3jJP8Fb4AA=="
+  },
+  "docs/security-camera-installation-1.png": {
+    "name": "security-camera-installation-1.1a970834.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQAgCdASoQAAkAA4BaJQBdgMWM7PEJWCbYAP7ruD/j0ylMLG+a5vhDuk0RGklrSRs+5mveGfxB4333wmMbBRBV/BxWnac17+0nPeavvg6E+Na+C0rVJ8oSsgwImOBaoAAAAA=="
+  },
+  "docs/security-camera-installation-2.png": {
+    "name": "security-camera-installation-2.10ae3541.webp",
+    "w": 1400,
+    "h": 1050,
+    "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABQAgCdASoQAAwAA4BaJYwCdH8AFxfwHb5QDAAA/qDvXqikcqnKTCchzyaJ7n2EQLf1Pgsc7AKMD+qLnJc0aW+TlHRlbylQHLld5cfECxJz56Sz68zI4BpnVGyOeCAA"
+  },
+  "docs/service-maintenance-1.png": {
+    "name": "service-maintenance-1.513b9b1c.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAABwAQCdASoQAAkAA4BaJYwAATv54AD+8eujhfIRZcjkzW1ZshlbFbyT+HhqWU5Ayqx24/nr12gZkz5BHFFTOYrWjoZzScOTuGv5lR3cJ7AyAwuCAAA="
+  },
+  "docs/service-maintenance-2.png": {
+    "name": "service-maintenance-2.3ce5ed0e.webp",
+    "w": 1400,
+    "h": 1050,
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAwAA4BaJYwCdAD1dn1vwAAA/u/liZcDtfg8O8Sx5eLWorWQJYK9DkGtKaUatRCchRvfsFz0WbrJHhYaYinB5KYP8+hAAAA="
+  },
+  "docs/side-entry-installation-1.png": {
+    "name": "side-entry-installation-1.3a6b00a6.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoQAAkAA4BaJZQC7H8AGJOD/ZrTAAD+5/k4AtjXQfmQrzSy734Diw53nEjZ25pq0+1r3LxmG3d3GWLWsKDetXySH+eQ93TvE776IMAA"
+  },
+  "docs/side-entry-installation-2.png": {
+    "name": "side-entry-installation-2.686d8d57.webp",
+    "w": 1400,
+    "h": 1050,
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAwAA4BaJQBOgCDaY9Gi+AD+sjvNEcAeV+6vqOzqqXdlSuqbDkFvdSQ69zneXSTkYWsy+nktUa6KYCHWooZzpwtnPxWIR/iz8AAA"
+  },
+  "docs/smoke-detector-installation-1.png": {
+    "name": "smoke-detector-installation-1.a0b79d24.webp",
+    "w": 1024,
+    "h": 1536,
+    "blur": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAAAwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JYwCo9Yvgtdhyoim+BxJqAngA/uc/AkNZWbQcyEzoc2s/XvserfzCkKEXzwdgeVCN7/qVhbt0dJatkAfx+u52NekHS89z4PMjdA/KJ0wDwTZC08HgYp1qWkM7HaHz6OPYMm+G+iIWpVQc3+TPbQFquorLX8G+xXCHd8EN5F1k7tJq0EayLecrsGVvxSXmk1s8tIAA"
+  },
+  "docs/smoke-detector-installation-2.png": {
+    "name": "smoke-detector-installation-2.03b2dea2.webp",
+    "w": 1400,
+    "h": 700,
+    "blur": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAQAgCdASoQAAgAA4BaJZwAFgAMsxszWFgAAP7zlXG39Yc9bqX6Xz1f7XSM6izliidiUdagWhbMB4AA"
+  },
+  "docs/split-and-multi-head-system-1.png": {
+    "name": "split-and-multi-head-system-1.d9288b59.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoQAAkAA4BaJQBdgCKzZuYfdMAA/t8dmABgrLi8p9Nbq+UX+75EehPSBDbacEZm4A/yPimK5kmDvFDh3nxuYQGv+2hoHULm0HsYAA=="
+  },
+  "docs/split-and-multi-head-system-2.png": {
+    "name": "split-and-multi-head-system-2.ec703754.webp",
+    "w": 1400,
+    "h": 1050,
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACQAgCdASoQAAwAA4BaJZQCdEf/i1oN9uYcEQFIAAD+1iYqjDeq3qxtvocfUlSoF+tBbxGuci6Om8ZhGfeHt8xQy84WYvp7NZxt1zE8XgY3CMypt4AWJgfagAA="
+  },
+  "docs/split-system-aircon-1.png": {
+    "name": "split-system-aircon-1.aa32af8a.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoQAAsAA4BaJYgCw7DRtjj6rhgXAAD+6tvNsMSs/47pAxTwC3NhQOQM3fFtRgLm5MZwuM6cletV6e+Yxmz+vWtKmLUTzgOQ2RwBDBdZznVPIajSTJof9e7TAAA="
+  },
+  "docs/split-system-aircon-2.png": {
+    "name": "split-system-aircon-2.cdfab32f.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAsAA4BaJZQCdAEUa++ffVAAAP7yaWyC+4CcrF2NiD3whJ9B8VIBrySWpXT9A7mR3xOrstm3+GijyE03JlPWjJ+OKxT0sAA="
+  },
+  "docs/switchboard-surge-protector-installation-1.png": {
+    "name": "switchboard-surge-protector-installation-1.29bb60f8.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABQAgCdASoQAAkAA4BaJYgCdBOIAs5pKzoTKAAA/ps6VPXHCdYvhD+3Ltuww1YTXDUtYeqwZBc5CnP+AdxEiWKg6LvYKeUwMOb4yGuBwUKFcvf8TfRTdmDdklDFJusHi8gPAAAA"
+  },
+  "docs/switchboard-surge-protector-installation-2.png": {
+    "name": "switchboard-surge-protector-installation-2.0a540d1d.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoQAAkAA4BaJZwAFgAMrRUCxAD+9kV9/PRsCr42NwdmgW4ZSdgo+o0zS+wwgLPPWIozDcTLdYAAAA=="
+  },
+  "docs/up-over-installation-1.png": {
+    "name": "up-over-installation-1.ba2f8ecc.webp",
+    "w": 1400,
+    "h": 788,
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAkAA4BaJZQAAqHs3FrNkIAA/udLcwwWKQYgbzvxVt3Ksq0xJdwdawJi1Y/tTW6624S0UEvNuBQsPFIzPCBAAAA="
+  },
+  "docs/up-over-installation-2.png": {
+    "name": "up-over-installation-2.cf3a9690.webp",
+    "w": 1400,
+    "h": 1050,
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAwAA4BaJYwCdAEQTG2MvhAAAP7n/x9bxIuO1enCfN50tUSt7wzL91HkkKYyxJoDrJcGPr0UhL7wYWwNC48tbXhiXlYF4AA="
+  },
+  "docs/usb-sockets-1.png": {
+    "name": "usb-sockets-1.7ff561c6.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAsAA4BaJaACdADPjYcDRWAAAP3V756p72xkOvBtNBCuc7u6MsS9w9D6Dhnp3eBjhpAcFt26I7pe20IGmPI8+uEv9RGG0JzOGAAA"
+  },
+  "docs/usb-sockets-2.png": {
+    "name": "usb-sockets-2.dcb52ef8.webp",
+    "w": 1400,
+    "h": 787,
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAkAA4BaJQBOgMWWrVG19ggAAP4E46DkGabvXqMAusXsZRq2qZk2dJVJiLgV4hVcLIvfXdMXqo2KQ7HnhysT37DSeEfmzU+qAAAA"
+  },
+  "docs/vrv-vrf-air-conditioning-1.png": {
+    "name": "vrv-vrf-air-conditioning-1.81ba63e7.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQAgCdASoQAAsAA4BaJYwCdAYtBm9N0w8HTUAA/s9a2g7T/2///V/a5ebJ3IugJyBsEJ9AQxKPujLl8FwfGrD39+HP2atxWih3bPbFaHts0WDOF68vC9Wc4ElbNjBltJTIAA=="
+  },
+  "docs/vrv-vrf-air-conditioning-2.png": {
+    "name": "vrv-vrf-air-conditioning-2.2ba080a8.webp",
+    "w": 1400,
+    "h": 933,
+    "blur": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQAgCdASoQAAsAA4BaJYwCdAD2NPlz/VYAAP7rHmqw2KOj9dGkFrd7qZxqG/0l6q8Ht7x6XQWKyoZPojHolM4+oWZ3ZuQ83oTR1NYKZR3JqZ7TYWhalGTAAAA="
+  }
+}

@@ -23,8 +23,8 @@ export default function QuoteDrawer() {
           or call now
           <span style={sx('flex:1;height:1px;background:#E1E8F0')} />
         </div>
-        <a href="tel:1300010393" style={sx('background:#0E2A47;color:#fff;border-radius:12px;padding:14px;text-align:center;font-family:Barlow,sans-serif;font-weight:700;font-size:17px')}>☏ 1300 010 393</a>
-        <a href="https://wa.me/61447440050" target="_blank" rel="noopener" style={sx('background:#EAF7DC;color:#3D7A0B;border-radius:12px;padding:14px;text-align:center;font-family:Barlow,sans-serif;font-weight:700;font-size:16px')}>WhatsApp 0447 440 050</a>
+        <a href="tel:1300010393" style={sx('background:#0E2A47;color:#fff;border-radius:12px;padding:14px;text-align:center;font-family:var(--font-heading);font-weight:700;font-size:17px')}>☏ 1300 010 393</a>
+        <a href="https://wa.me/61447440050" target="_blank" rel="noopener" style={sx('background:#EAF7DC;color:#3D7A0B;border-radius:12px;padding:14px;text-align:center;font-family:var(--font-heading);font-weight:700;font-size:16px')}>WhatsApp 0447 440 050</a>
       </div>
     </div>
   );

@@ -38,7 +38,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         <Blocks blocks={shape(post.blocks)} variant="post" />
         <div style={sx('margin-top:20px;background:#1279BF;color:#fff;border-radius:18px;padding:26px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px')}>
           <div>
-            <div style={sx('font-family:Barlow,sans-serif;font-weight:700;font-size:22px')}>Need a hand with this?</div>
+            <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:22px')}>Need a hand with this?</div>
             <div style={sx('color:#E3F0FA')}>Licensed technicians across Brisbane and the Gold Coast.</div>
           </div>
           <div style={sx('display:flex;gap:10px;flex-wrap:wrap')}>

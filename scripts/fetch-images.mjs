@@ -6,11 +6,12 @@
  * Output filenames carry a content hash so public/img can be served immutable.
  * Re-running rebuilds everything from scratch (~40 images, under a minute).
  */
-import { mkdir, writeFile, readdir, rm } from 'node:fs/promises';
+import { mkdir, writeFile, readdir, readFile, rm } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
+import { withBlur } from './lib/blur.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = join(ROOT, 'public', 'img');
@@ -119,7 +120,13 @@ async function flatten(src) {
 async function run() {
   await mkdir(OUT, { recursive: true });
   // Filenames are content-hashed, so stale ones would linger forever - clear first.
-  for (const f of await readdir(OUT)) await rm(join(OUT, f));
+  // Images owned by scripts/import-images.mjs (lib/images.docs.json) are kept.
+  let keep = new Set();
+  try {
+    const docs = JSON.parse(await readFile(join(ROOT, 'lib', 'images.docs.json'), 'utf8'));
+    keep = new Set(Object.values(docs).map((v) => v.name));
+  } catch { /* no docs manifest yet */ }
+  for (const f of await readdir(OUT)) if (!keep.has(f)) await rm(join(OUT, f));
 
   const manifest = {};
   let before = 0, after = 0, built = 0;
@@ -138,7 +145,7 @@ async function run() {
     const name = `${localStem(path)}.${hash8(out)}.webp`;
     await writeFile(join(OUT, name), out);
 
-    manifest[path] = { name, w: meta.width, h: meta.height };
+    manifest[path] = await withBlur({ name, w: meta.width, h: meta.height }, out);
     before += src.length;
     after += out.length;
     built++;

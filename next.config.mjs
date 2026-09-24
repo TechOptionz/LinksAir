@@ -4,6 +4,11 @@ import { dirname } from 'path';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   outputFileTracingRoot: dirname(fileURLToPath(import.meta.url)),
+  // `next dev` and `next build` both write to .next; running a build while the
+  // dev server is up corrupts it. NEXT_DIST_DIR=.next-build lets a verification
+  // build run alongside the dev server. Unset (Vercel, CI) it is the default.
+  distDir: process.env.NEXT_DIST_DIR || '.next',
+  poweredByHeader: false,
   images: {
     // Sources in public/img are already WebP; AVIF halves them again at the
     // quality Next uses (q=47, effort=3) for ~1.5x the encode cost.

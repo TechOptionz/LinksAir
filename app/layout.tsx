@@ -1,7 +1,29 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+import { Barlow, Nunito_Sans } from 'next/font/google';
 import Chrome from '@/components/Chrome';
+import { img } from '@/lib/images';
+
+/*
+ * Fonts are self-hosted through next/font: the files are downloaded at build
+ * time, served from /_next/static (immutable), preloaded, and given a
+ * size-adjusted fallback so text doesn't reflow when they arrive. This
+ * replaces the render-blocking Google Fonts stylesheet (two extra origins on
+ * the critical path). Only the weights the templates use are included.
+ */
+const heading = Barlow({
+  subsets: ['latin'],
+  weight: ['600', '700', '800'],
+  display: 'swap',
+  variable: '--font-heading',
+});
+const body = Nunito_Sans({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  display: 'swap',
+  variable: '--font-body',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -25,19 +47,17 @@ const JSONLD = {
   openingHours: 'Mo-Su 00:00-24:00',
 };
 
+// Resolved here (server) so the client bundle doesn't carry the image manifests.
+const LOGO = img('2024/09/logo.png');
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${heading.variable} ${body.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-          rel="stylesheet"
-        />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSONLD) }} />
       </head>
       <body>
-        <Chrome>{children}</Chrome>
+        <Chrome logo={LOGO}>{children}</Chrome>
       </body>
     </html>
   );

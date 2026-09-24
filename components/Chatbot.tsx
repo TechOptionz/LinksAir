@@ -2,12 +2,12 @@
 
 import { useRef, useState } from 'react';
 import { sx } from '@/lib/sx';
-import { SITE } from '@/lib/content';
+import { SITE } from '@/lib/site';
 
 type Msg = { from: 'bot' | 'user'; text: string };
 type Step = 'start' | 'name' | 'phone' | 'suburb' | 'question' | 'done';
 
-export default function Chatbot() {
+export default function Chatbot({ hidden = false }: { hidden?: boolean }) {
   const [chatOpen, setChatOpen] = useState(false);
   const [chatInput, setChatInput] = useState('');
   const [chat, setChat] = useState<Msg[]>([{ from: 'bot', text: 'Hi! I’m the Links Air assistant. How can we help today?' }]);
@@ -43,14 +43,14 @@ export default function Chatbot() {
       : [];
 
   return (
-    <div className={'lae-chat-dock' + (SITE.stickyBar ? '' : ' no-sticky')}>
+    <div className={'lae-chat-dock' + (SITE.stickyBar ? '' : ' no-sticky')} style={hidden ? { display: 'none' } : undefined}>
       {chatOpen ? (
         <div role="dialog" aria-label="Chat with Links Air" style={sx('width:min(360px,calc(100vw - 32px));height:min(520px,calc(100vh - 180px));background:#fff;border-radius:18px;box-shadow:0 24px 60px rgba(8,30,55,.3);display:flex;flex-direction:column;overflow:hidden;animation:lae-fade .2s ease')}>
           <div style={sx('background:#1279BF;color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center')}>
             <div style={sx('display:flex;align-items:center;gap:10px')}>
-              <span style={sx('width:36px;height:36px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-family:Barlow,sans-serif;font-weight:800;color:#1279BF')}>L</span>
+              <span style={sx('width:36px;height:36px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:800;color:#1279BF')}>L</span>
               <div>
-                <div style={sx('font-family:Barlow,sans-serif;font-weight:700;font-size:16px;line-height:1.1')}>Links Air assistant</div>
+                <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:16px;line-height:1.1')}>Links Air assistant</div>
                 <div style={sx('font-size:12px;color:#C9E2F5;display:flex;align-items:center;gap:5px')}>
                   <span style={sx('width:7px;height:7px;border-radius:50%;background:#9BE04A;display:inline-block')} />
                   Typically replies instantly
@@ -82,7 +82,7 @@ export default function Chatbot() {
           </form>
         </div>
       ) : null}
-      <button type="button" onClick={() => setChatOpen((s) => !s)} aria-label="Chat with us" className="hv-gd" style={sx('height:56px;padding:0 20px 0 16px;border-radius:999px;border:0;background:#78B72A;color:#fff;font-family:Barlow,sans-serif;font-weight:700;font-size:16px;display:flex;align-items:center;gap:10px;cursor:pointer;box-shadow:0 12px 30px rgba(14,42,71,.25);animation:lae-pulse 2.4s ease-out infinite')}>
+      <button type="button" onClick={() => setChatOpen((s) => !s)} aria-label="Chat with us" className="hv-gd lae-chat-btn" style={sx('height:56px;padding:0 20px 0 16px;border-radius:999px;border:0;background:#78B72A;color:#fff;font-family:var(--font-heading);font-weight:700;font-size:16px;display:flex;align-items:center;gap:10px;cursor:pointer;box-shadow:0 12px 30px rgba(14,42,71,.25)')}>
       <span style={sx('width:28px;height:28px;border-radius:50%;background:#fff;color:#78B72A;display:flex;align-items:center;justify-content:center;font-size:15px')}>💬</span>
         {chatOpen ? 'Close chat' : 'Chat with us'}
       </button>

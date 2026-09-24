@@ -15,8 +15,8 @@ export default function AreaArticle({ title, areaGroups, areaParas }: { title: s
           <h1 style={sx('font-size:clamp(30px,4.4vw,52px);font-weight:800;margin-bottom:14px')}>Air conditioning & electricians in {title}</h1>
           <p style={sx('font-size:clamp(16px,1.5vw,19px);color:#E3F0FA;max-width:640px;margin-bottom:24px')}>Licensed installers and electricians servicing every {title} suburb. Split systems, ducted air, switchboards, lighting, EV chargers and more, with upfront quotes.</p>
           <div style={sx('display:flex;flex-wrap:wrap;gap:12px')}>
-            <QuoteButton className="hv-redd" style={sx('background:#E32027;color:#fff;border:0;border-radius:12px;padding:15px 24px;font-family:Barlow,sans-serif;font-weight:700;font-size:16.5px;cursor:pointer')}>Get a Free Quote</QuoteButton>
-            <a href="tel:1300010393" style={sx('background:#fff;color:#0E2A47;border-radius:12px;padding:15px 22px;font-family:Barlow,sans-serif;font-weight:700;font-size:16.5px')}>☏ 1300 010 393</a>
+            <QuoteButton className="hv-redd" style={sx('background:#E32027;color:#fff;border:0;border-radius:12px;padding:15px 24px;font-family:var(--font-heading);font-weight:700;font-size:16.5px;cursor:pointer')}>Get a Free Quote</QuoteButton>
+            <a href="tel:1300010393" style={sx('background:#fff;color:#0E2A47;border-radius:12px;padding:15px 22px;font-family:var(--font-heading);font-weight:700;font-size:16.5px')}>☏ 1300 010 393</a>
           </div>
         </div>
       </section>
@@ -49,8 +49,8 @@ export default function AreaArticle({ title, areaGroups, areaParas }: { title: s
         <aside style={sx('display:flex;flex-direction:column;gap:16px;position:sticky;top:88px')}>
           <AreaQuoteForm areaTitle={title} />
           <div style={sx('background:#0E2A47;color:#fff;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:12px')}>
-            <div style={sx('font-family:Barlow,sans-serif;font-weight:700;font-size:18px')}>On call 24/7</div>
-            <a href="tel:1300010393" className="hv-lime" style={sx('color:#fff;font-family:Barlow,sans-serif;font-weight:800;font-size:26px;line-height:1')}>1300 010 393</a>
+            <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:18px')}>On call 24/7</div>
+            <a href="tel:1300010393" className="hv-lime" style={sx('color:#fff;font-family:var(--font-heading);font-weight:800;font-size:26px;line-height:1')}>1300 010 393</a>
             <a href="https://wa.me/61447440050" target="_blank" rel="noopener" className="hv-gd" style={sx('background:#78B72A;color:#fff;border-radius:10px;padding:12px;text-align:center;font-weight:700')}>Message on WhatsApp</a>
           </div>
         </aside>
