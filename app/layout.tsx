@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
 import { Barlow, Nunito_Sans } from 'next/font/google';
 import Chrome from '@/components/Chrome';
 import { img } from '@/lib/images';
+import { Analytics } from '@vercel/analytics/next';
 
 /*
  * Fonts are self-hosted through next/font: the files are downloaded at build
@@ -58,6 +59,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>
         <Chrome logo={LOGO}>{children}</Chrome>
+        <Analytics />
       </body>
     </html>
   );
