@@ -61,10 +61,11 @@ export const IMGS: Record<string, string> = {
   'split-system-aircon': '2024/09/split_innerimg01.jpg', 'back-to-back-installation': '2024/09/Outdoor-9.1kW-scaled.jpg', 'side-entry-installation': '2024/09/20211027_111742.jpg', 'up-over-installation': '2024/09/20220621_142833.jpg',
   'ducted-airconditioning': '2025/04/DaikinDuctedSystem_14kw.webp', 'ducted-multi-zone-air-conditioning': '2025/04/Ducted-aircon-zoning.jpg', 'vrv-vrf-air-conditioning': '2024/09/Samsung-duct-S2_-ducted-outdoor-unit-AC120TXAPKG_SA_800x.webp',
   'design-and-construction': '2024/09/6-outlets-900x442-1.jpg', 'repair-installation': '2024/09/MHI-10kW-Open-scaled.jpg', 'service-maintenance': '2024/09/Ducted-outdoor.jpg', 'air-conditioning-installation': '2024/09/Tripple-installation.jpg',
-  'ac-services': '2024/09/ActronAir_Stacked-scaled.jpg', 'split-and-multi-head-system': '2024/09/Multihead-8Kw-scaled.jpg', 'electrical-services': '2024/09/builder_innerimg001.jpg', 'residential-electrician': '2024/10/residential_innerimg1.jpg',
+  'ac-services': 'docs/ac-services-1.png', 'split-and-multi-head-system': '2024/09/Multihead-8Kw-scaled.jpg', 'electrical-services': 'docs/electrical-services-1.png', 'residential-electrician': '2024/10/residential_innerimg1.jpg',
   'data-points-and-network-cabling': '2024/10/data_pointsinnerimg1.jpg', 'downlights': '2024/09/LED_lights.jpeg', 'led-lights-installation': '2024/09/kitchen-lighting-led-under-cabinet-light-bar.jpg', 'electrical-switchboard-upgrade': '2024/09/NICEIC.jpg',
   'ceiling-fan-installation': '2024/09/Fan-Pic-04.jpg.webp', 'ceiling-exhaust-fans': '2024/09/20210628_113722-scaled.jpg', 'oven-and-cooktop-installations': '2024/09/Cooktop.png', 'ev-charger-installation': '2024/09/EV-Charger.png',
-  'building-and-construction': '2024/09/builder_innerimg001.jpg', 'pendant-light-installer': '2024/09/download.jpg', 'bathroom-exhaust-heater-installations': '2024/09/Inspirasjon-bad-vatrom.jpg', 'about-us': 'docs/about-us-1.png',
+  'building-and-construction': 'docs/building-and-construction-1.png', 'pendant-light-installer': '2024/09/download.jpg', 'bathroom-exhaust-heater-installations': '2024/09/Inspirasjon-bad-vatrom.jpg', 'about-us': 'docs/about-us-1.png',
+  'reviews': 'docs/reviews-1.png', 'terms-conditions': 'docs/terms-conditions-1.png', 'privacy-policy': 'docs/privacy-policy-1.png',
 };
 
 export const EXPECT = ['Fully licensed and insured technicians', 'On-time and tidy service', 'Clear quotes – no hidden fees', 'Australian standard compliance', 'Great communication from start to finish'];
@@ -160,7 +161,7 @@ export function contentModel(slug: string): ContentModel {
   const src: Entry =
     getPage(slug) ||
     (slug === 'privacy-policy'
-      ? { slug: 'privacy-policy', title: 'Privacy Policy', blocks: PRIVACY, images: [] }
+      ? { slug: 'privacy-policy', title: 'Privacy Policy', blocks: PRIVACY, images: [], hero: 'docs/privacy-policy-1.png' }
       : { slug, title: '', blocks: [], images: [] });
   const blocks = src.blocks || [];
   const firstP = blocks.find((b) => b.t === 'p' && (b.text || '').split(/\s+/).length > 8);
@@ -281,9 +282,9 @@ export function areaCards() {
 export const TRUST_STATS = [{ v: '5.0 ★', l: '200+ Google reviews' }, { v: '2014', l: 'Serving Brisbane since' }, { v: '24/7', l: 'On call for emergencies' }, { v: '100%', l: 'Licensed & insured' }, { v: '$0', l: 'Hidden charges' }];
 
 export const PILLARS = [
-  { title: 'Air Conditioning Services', text: 'Supply, installation, repairs and maintenance of split system, multi-head and ducted air conditioners across Brisbane & Gold Coast.', href: '/ac-services', img: asset('2024/09/split_innerimg01.jpg'), alt: 'Air conditioning installation', short: 'air conditioning' },
-  { title: 'Electrical Services', text: 'Licensed residential and commercial electricians for lighting, power points, switchboards, safety switches, EV chargers and emergency repairs.', href: '/electrical-services', img: asset('2024/10/residential_innerimg1.jpg'), alt: 'Electrical services', short: 'electrical' },
-  { title: 'Building & Construction', text: 'Complete electrical for new house builds, working with builders from under-slab to rough-in to fit-off, plus air conditioning wiring.', href: '/building-and-construction', img: asset('2024/09/builder_innerimg001.jpg'), alt: 'Electrical for new builds', short: 'new builds' },
+  { title: 'Air Conditioning Services', text: 'Supply, installation, repairs and maintenance of split system, multi-head and ducted air conditioners across Brisbane & Gold Coast.', href: '/ac-services', img: asset('docs/ac-services-1.png'), alt: 'Air conditioning installation', short: 'air conditioning' },
+  { title: 'Electrical Services', text: 'Licensed residential and commercial electricians for lighting, power points, switchboards, safety switches, EV chargers and emergency repairs.', href: '/electrical-services', img: asset('docs/electrical-services-1.png'), alt: 'Electrical services', short: 'electrical' },
+  { title: 'Building & Construction', text: 'Complete electrical for new house builds, working with builders from under-slab to rough-in to fit-off, plus air conditioning wiring.', href: '/building-and-construction', img: asset('docs/building-and-construction-1.png'), alt: 'Electrical for new builds', short: 'new builds' },
 ];
 
 export const WHAT_WE_DO = [{ n: '01', t: 'General electrical work (lights, fans, power points)', href: '/general-electrical-maintenance' }, { n: '02', t: 'Switchboard upgrades & safety checks', href: '/electrical-switchboard-upgrade' }, { n: '03', t: 'Indoor & outdoor lighting installations', href: '/led-lights-installation' }, { n: '04', t: 'Split system & ducted air conditioning installs', href: '/split-system-aircon' }, { n: '05', t: 'Air conditioning servicing & maintenance', href: '/service-maintenance' }, { n: '06', t: 'Oven, cooktop & appliance installation', href: '/oven-and-cooktop-installations' }, { n: '07', t: 'Ceiling fan installations', href: '/ceiling-fan-installation' }, { n: '08', t: 'Emergency electrical repairs', href: '/electrical-services' }];

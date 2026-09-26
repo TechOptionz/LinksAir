@@ -5,6 +5,12 @@
     "h": 1024,
     "blur": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQAgCdASoQABAAA4BaJZwAD5IQb/1XszQAAP73DpKFMPJM8tPD8vrzXdtfYF/NkFK1E7inQtNjvgJn6GUQz2YagKcHx4aye3pQK03ePcDi1qPNKZ1ltx9lXPpAzWzif8abXw1SgFFgQAAA"
   },
+  "docs/about-us-2.png": {
+    "name": "about-us-2.620d622d.webp",
+    "w": 1376,
+    "h": 768,
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoQAAkAA4BaJYwCdICXGZYOUwgAAP7Vxt7iTW2vHo/MmoIXLpmGkya/l/LO2Wmcut8GRtTMuvsUv1zhuQFqPgGWjlW1SIoAAAA="
+  },
   "docs/ac-services-1.png": {
     "name": "ac-services-1.0a1226d9.webp",
     "w": 1400,
@@ -52,6 +58,18 @@
     "w": 1400,
     "h": 933,
     "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoQAAsAA4BaJaACdAEUlw9kmQAA/phcMh+h0jvPprv5+LGno1Mj9nxmMZiaIo1VfsOcYnXwc03OOwVpdZHnA7AKOi+x4MUYr1LFyXyDdyG/EAKfZgaAAA=="
+  },
+  "docs/building-and-construction-1.png": {
+    "name": "building-and-construction-1.fafddf5a.webp",
+    "w": 1376,
+    "h": 768,
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQAgCdASoQAAkAA4BaJZgCdAdwBxJvd/WBK4AA/rc9P3zKLQiQz7I6ywhM5jtpb+xiGEyl59nm9f+gCPTtI+YUzAdetfqBNeMl0Ah1IBQWA90qkFSJ2AwrZa9NocMhgKgAAA=="
+  },
+  "docs/building-and-construction-2.png": {
+    "name": "building-and-construction-2.1cc6f26d.webp",
+    "w": 1376,
+    "h": 768,
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAQCdASoQAAkAA4BaJQBOgB48mPlAAP7JQ0QKOH2eLHtLwlw4Z22bDVQqbbkmC+xBZc3fEDkLPz/9Tw0XnrcgFCqXGTya6v93h+CwrIxkPHAA"
   },
   "docs/cctv-camera-installation-1.png": {
     "name": "cctv-camera-installation-1.186189d4.webp",
@@ -148,6 +166,18 @@
     "w": 1400,
     "h": 788,
     "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAQCdASoQAAkAA4BaJZQCdAEQTqUIIAD+8EIWYjGiTdEbnk8NCTAwhqRHCig497l1a3JB05FLtJ0tQNOx/W5toGaDdgWHXIq4eSAWgzwBpwAA"
+  },
+  "docs/electrical-services-1.png": {
+    "name": "electrical-services-1.b7a974d5.webp",
+    "w": 1376,
+    "h": 768,
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQAAkAA4BaJQBOgBxuXquq7AAAzjwhE2R2U97++3+QyWrQpcXYA9atBcp6Ow+6J2xqP60+khvu4+XjmYV7wbW7qAvjs97d0OhWNAgA"
+  },
+  "docs/electrical-services-2.png": {
+    "name": "electrical-services-2.84af308d.webp",
+    "w": 1376,
+    "h": 768,
+    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoQAAkAA4BaJaACsAYrxkeMkwAA/u5bTJmWG0cjZXO9/p74Wdncqia54zqkWvaxCdFdQ7pWJLBKj8VZXPgn+XN/Qxv+hqMC+Xz/QZB2szfR10ADTOhmAA=="
   },
   "docs/electrical-switchboard-upgrade-1.png": {
     "name": "electrical-switchboard-upgrade-1.65bd82c6.webp",
@@ -281,6 +311,12 @@
     "h": 700,
     "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAABwAQCdASoQAAgAA4BaJZzuAACIAAD+8gqcLe2g+D7bdNOGsjfo7XyOiqcLmozxPbOlG8BNmYfoTyJ1AQAAAA=="
   },
+  "docs/privacy-policy-1.png": {
+    "name": "privacy-policy-1.f7be4d20.webp",
+    "w": 1376,
+    "h": 768,
+    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQAAkAA4BaJZgCsAYs3bT94SA24AD+1QbGT+Vn6WlVlq9nVc+YFovih9tb+O/EwY76/qcKt9H0zg9BHgqq5fltoHa9Vk+HfAyBIAJHq59IvgM6T4AAAA=="
+  },
   "docs/repair-installation-1.png": {
     "name": "repair-installation-1.56d6df1c.webp",
     "w": 1400,
@@ -305,6 +341,12 @@
     "h": 1050,
     "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwAgCdASoQAAwAA4BaJQBOgMWW7dydHAvAAAD+6utZa9JYjXQK81CEOMduDj8q3oXE2iNye2+AjMlqjvT5hlsyGI3vi/xSbiVPHjU/Nd+br8BEAP2cIcOz7Axbc6UxMAAAAA=="
   },
+  "docs/reviews-1.png": {
+    "name": "reviews-1.217add3b.webp",
+    "w": 1376,
+    "h": 768,
+    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoQAAkAA4BaJaACdADhmIoW9YAA/sI3DPv5VRm1ucHYC4Osel3NKZUG5dr1PelzWFR9MhThgqq9JIHm666NxtovfE73RE/1I9583RwrdzkpAAAA"
+  },
   "docs/security-and-ev-1.png": {
     "name": "security-and-ev-1.68f0c06f.webp",
     "w": 1400,
@@ -328,6 +370,12 @@
     "w": 1400,
     "h": 1050,
     "blur": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAABQAgCdASoQAAwAA4BaJYwCdH8AFxfwHb5QDAAA/qDvXqikcqnKTCchzyaJ7n2EQLf1Pgsc7AKMD+qLnJc0aW+TlHRlbylQHLld5cfECxJz56Sz68zI4BpnVGyOeCAA"
+  },
+  "docs/service-area-map.png": {
+    "name": "service-area-map.bb39db14.webp",
+    "w": 1376,
+    "h": 768,
+    "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAQAgCdASoQAAkAA4BaJZgCdAEf59Gm72DAAP71GWmQp+SnCYKi0eMvHP9LXI1n/L81/Mjdz1untfSbWFFYAA=="
   },
   "docs/service-maintenance-1.png": {
     "name": "service-maintenance-1.513b9b1c.webp",
@@ -400,6 +448,12 @@
     "w": 1400,
     "h": 788,
     "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoQAAkAA4BaJZwAFgAMrRUCxAD+9kV9/PRsCr42NwdmgW4ZSdgo+o0zS+wwgLPPWIozDcTLdYAAAA=="
+  },
+  "docs/terms-conditions-1.png": {
+    "name": "terms-conditions-1.f7be4d20.webp",
+    "w": 1376,
+    "h": 768,
+    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoQAAkAA4BaJZgCsAYs3bT94SA24AD+1QbGT+Vn6WlVlq9nVc+YFovih9tb+O/EwY76/qcKt9H0zg9BHgqq5fltoHa9Vk+HfAyBIAJHq59IvgM6T4AAAA=="
   },
   "docs/up-over-installation-1.png": {
     "name": "up-over-installation-1.ba2f8ecc.webp",

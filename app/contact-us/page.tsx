@@ -1,12 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { sx } from '@/lib/sx';
 import { CONTACT_CARDS } from '@/lib/content';
+import { blur, img } from '@/lib/images';
 import { ContactForm } from '@/components/forms';
 
 export const metadata: Metadata = { title: 'Contact Us' };
 
 export default function ContactPage() {
+  const mapImg = img('docs/service-area-map.png');
   return (
     <div>
       <section style={sx('background:#1279BF;color:#fff')}>
@@ -37,9 +40,16 @@ export default function ContactPage() {
               <a key={card.l} href={card.href} target={card.target} rel={card.target === '_blank' ? 'noopener' : undefined} className="hv-bo" style={style}>{inner}</a>
             );
           })}
-          <div style={sx('border-radius:16px;border:1px dashed #B8C6D6;background:repeating-linear-gradient(135deg,#E9EFF5 0 12px,#F4F7FA 12px 24px);min-height:220px;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px')}>
-            <span style={sx('font-family:ui-monospace,monospace;font-size:13px;color:#5B6E82')}>Google Map embed: service area Brisbane → Gold Coast</span>
-          </div>
+          <figure style={sx('margin:0;border-radius:16px;overflow:hidden;border:1px solid #E1E8F0;box-shadow:0 8px 24px rgba(8,30,55,.06);background:#fff;position:relative;aspect-ratio:16/9')}>
+            <Image
+              src={mapImg.src}
+              alt="Links Air & Electrical service area map: Brisbane, Ipswich, Logan and Gold Coast"
+              fill
+              {...blur(mapImg)}
+              sizes="(max-width: 899px) 100vw, 560px"
+              style={sx('object-fit:cover')}
+            />
+          </figure>
         </div>
         <ContactForm />
       </div>
