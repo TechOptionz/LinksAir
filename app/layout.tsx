@@ -5,6 +5,9 @@ import { Barlow, Nunito_Sans } from 'next/font/google';
 import Chrome from '@/components/Chrome';
 import { img } from '@/lib/images';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SITE_URL } from '@/lib/url';
+import OG_IMAGE from '@/lib/og-image.json';
 
 /*
  * Fonts are self-hosted through next/font: the files are downloaded at build
@@ -27,12 +30,34 @@ const body = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
+  // Absolute-URL base for the canonical link, Open Graph URLs and the OG image
+  // (see lib/url.ts for how the origin is chosen).
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Links Air & Electrical | Air Conditioning & Electricians Brisbane & Gold Coast',
     template: '%s | Links Air & Electrical',
   },
   description:
     'Licensed air conditioning installers and electricians serving Brisbane, Gold Coast, Logan and Ipswich. Split systems, ducted air, switchboards, EV chargers. 200+ five-star Google reviews. Call 1300 010 393.',
+  // './' resolves to the current route, so every page canonicalises to itself
+  // on the production origin.
+  alternates: { canonical: './' },
+  openGraph: {
+    type: 'website',
+    siteName: 'Links Air & Electrical',
+    locale: 'en_AU',
+    url: './',
+    // Title and description are inherited from the page's resolved metadata.
+    images: [
+      {
+        url: `/img/${OG_IMAGE.name}`,
+        width: OG_IMAGE.w,
+        height: OG_IMAGE.h,
+        alt: 'Links Air & Electrical technician servicing a split system air conditioner',
+      },
+    ],
+  },
+  twitter: { card: 'summary_large_image' },
 };
 
 const JSONLD = {
@@ -60,6 +85,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <Chrome logo={LOGO}>{children}</Chrome>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

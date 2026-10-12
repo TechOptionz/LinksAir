@@ -12,11 +12,11 @@ export default function FaqPage() {
     <div>
       <section style={sx('background:#1279BF;color:#fff')}>
         <div style={sx('max-width:1220px;margin:0 auto;padding:clamp(32px,5vw,64px) 20px')}>
-          <nav aria-label="Breadcrumb" style={sx('font-size:13.5px;color:#C9E2F5;margin-bottom:14px')}>
-            <Link href="/" style={sx('color:#C9E2F5')}>Home</Link> / <span style={sx('color:#fff')}>FAQ</span>
+          <nav aria-label="Breadcrumb" style={sx('font-size:13.5px;color:#fff;margin-bottom:14px')}>
+            <Link href="/" style={sx('color:#fff')}>Home</Link> / <span style={sx('color:#fff')}>FAQ</span>
           </nav>
           <h1 style={sx('font-size:clamp(30px,4.4vw,52px);font-weight:800;margin-bottom:14px')}>Frequently asked questions</h1>
-          <p style={sx('font-size:clamp(16px,1.5vw,19px);color:#E3F0FA;max-width:640px')}>Answers about ducted and split system air conditioning, electrical work, pricing and emergency call-outs.</p>
+          <p style={sx('font-size:clamp(16px,1.5vw,19px);color:#fff;max-width:640px')}>Answers about ducted and split system air conditioning, electrical work, pricing and emergency call-outs.</p>
         </div>
       </section>
       <div style={sx('max-width:860px;margin:0 auto;padding:clamp(32px,5vw,64px) 20px;display:flex;flex-direction:column;gap:10px')}>

@@ -35,7 +35,7 @@ export function HeroQuoteForm() {
       </select>
       <textarea name="message" rows={2} placeholder="Tell us about the job (optional)" aria-label="Message" style={sx('padding:13px 14px;border:1px solid #D4DEE8;border-radius:10px;width:100%;resize:vertical')} />
       <button type="submit" className="hv-redd" style={sx('background:#E32027;color:#fff;border:0;border-radius:12px;padding:15px;font-family:var(--font-heading);font-weight:700;font-size:17px;cursor:pointer')}>Send my enquiry</button>
-      <p style={sx('font-size:12.5px;color:#7A8A9C;text-align:center')}>No obligation. We never share your details.</p>
+      <p style={sx('font-size:12.5px;color:#5F7187;text-align:center')}>No obligation. We never share your details.</p>
     </form>
   );
 }
@@ -91,7 +91,7 @@ export function ContactForm() {
       </select>
       <textarea name="message" rows={4} placeholder="Tell us about the job" aria-label="Message" style={sx('padding:13px 14px;border:1px solid #D4DEE8;border-radius:10px;width:100%;resize:vertical')} />
       <button type="submit" className="hv-redd" style={sx('background:#E32027;color:#fff;border:0;border-radius:12px;padding:15px;font-family:var(--font-heading);font-weight:700;font-size:17px;cursor:pointer')}>Send my enquiry</button>
-      <p style={sx('font-size:12.5px;color:#7A8A9C')}>By submitting you agree to our <Link href="/privacy-policy">privacy policy</Link>.</p>
+      <p style={sx('font-size:12.5px;color:#5F7187')}>By submitting you agree to our <Link href="/privacy-policy" style={sx('text-decoration:underline')}>privacy policy</Link>.</p>
     </form>
   );
 }

@@ -14,11 +14,11 @@ export default function ContactPage() {
     <div>
       <section style={sx('background:#1279BF;color:#fff')}>
         <div style={sx('max-width:1220px;margin:0 auto;padding:clamp(32px,5vw,64px) 20px')}>
-          <nav aria-label="Breadcrumb" style={sx('font-size:13.5px;color:#C9E2F5;margin-bottom:14px')}>
-            <Link href="/" style={sx('color:#C9E2F5')}>Home</Link> / <span style={sx('color:#fff')}>Contact</span>
+          <nav aria-label="Breadcrumb" style={sx('font-size:13.5px;color:#fff;margin-bottom:14px')}>
+            <Link href="/" style={sx('color:#fff')}>Home</Link> / <span style={sx('color:#fff')}>Contact</span>
           </nav>
           <h1 style={sx('font-size:clamp(30px,4.4vw,52px);font-weight:800;margin-bottom:14px')}>Get in touch with us</h1>
-          <p style={sx('font-size:clamp(16px,1.5vw,19px);color:#E3F0FA;max-width:640px')}>Call, message or send the form. We&apos;re on call 24/7 across Brisbane and the Gold Coast and reply to every enquiry.</p>
+          <p style={sx('font-size:clamp(16px,1.5vw,19px);color:#fff;max-width:640px')}>Call, message or send the form. We&apos;re on call 24/7 across Brisbane and the Gold Coast and reply to every enquiry.</p>
         </div>
       </section>
       <div className="lae-split" style={sx('max-width:1220px;margin:0 auto;padding:clamp(32px,5vw,64px) 20px')}>
@@ -27,7 +27,7 @@ export default function ContactPage() {
             const inner = (
               <>
                 <div style={sx('min-width:0')}>
-                  <div style={sx('font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7A8A9C')}>{card.l}</div>
+                  <div style={sx('font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#5F7187')}>{card.l}</div>
                   <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:clamp(15px,4.6vw,22px);color:#14263A;overflow-wrap:anywhere;line-height:1.25')}>{card.v}</div>
                 </div>
                 <span style={sx('color:#1279BF;font-size:20px;flex-shrink:0')}>→</span>

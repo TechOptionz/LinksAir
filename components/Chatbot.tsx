@@ -51,7 +51,7 @@ export default function Chatbot({ hidden = false }: { hidden?: boolean }) {
               <span style={sx('width:36px;height:36px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:800;color:#1279BF')}>L</span>
               <div>
                 <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:16px;line-height:1.1')}>Links Air assistant</div>
-                <div style={sx('font-size:12px;color:#C9E2F5;display:flex;align-items:center;gap:5px')}>
+                <div style={sx('font-size:12px;color:#fff;display:flex;align-items:center;gap:5px')}>
                   <span style={sx('width:7px;height:7px;border-radius:50%;background:#9BE04A;display:inline-block')} />
                   Typically replies instantly
                 </div>
@@ -82,7 +82,7 @@ export default function Chatbot({ hidden = false }: { hidden?: boolean }) {
           </form>
         </div>
       ) : null}
-      <button type="button" onClick={() => setChatOpen((s) => !s)} aria-label="Chat with us" className="hv-gd lae-chat-btn" style={sx('height:56px;padding:0 20px 0 16px;border-radius:999px;border:0;background:#78B72A;color:#fff;font-family:var(--font-heading);font-weight:700;font-size:16px;display:flex;align-items:center;gap:10px;cursor:pointer;box-shadow:0 12px 30px rgba(14,42,71,.25)')}>
+      <button type="button" onClick={() => setChatOpen((s) => !s)} aria-label="Chat with us" className="hv-gd lae-chat-btn" style={sx('height:56px;padding:0 20px 0 16px;border-radius:999px;border:0;background:#44800E;color:#fff;font-family:var(--font-heading);font-weight:700;font-size:16px;display:flex;align-items:center;gap:10px;cursor:pointer;box-shadow:0 12px 30px rgba(14,42,71,.25)')}>
       <span style={sx('width:28px;height:28px;border-radius:50%;background:#fff;color:#78B72A;display:flex;align-items:center;justify-content:center;font-size:15px')}>💬</span>
         {chatOpen ? 'Close chat' : 'Chat with us'}
       </button>

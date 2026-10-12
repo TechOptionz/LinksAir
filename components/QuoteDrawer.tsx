@@ -18,7 +18,7 @@ export default function QuoteDrawer() {
           <button type="button" onClick={close} aria-label="Close" style={sx('width:44px;height:44px;border-radius:12px;border:1px solid #E1E8F0;background:#fff;font-size:20px;cursor:pointer;flex-shrink:0')}>×</button>
         </div>
         <DrawerQuoteForm />
-        <div style={sx('display:flex;align-items:center;gap:10px;color:#7A8A9C;font-size:13px')}>
+        <div style={sx('display:flex;align-items:center;gap:10px;color:#5F7187;font-size:13px')}>
           <span style={sx('flex:1;height:1px;background:#E1E8F0')} />
           or call now
           <span style={sx('flex:1;height:1px;background:#E1E8F0')} />

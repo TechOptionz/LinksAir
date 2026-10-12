@@ -22,12 +22,12 @@ export default function Home() {
               <span style={sx('color:#FFC845;letter-spacing:1px')}>★★★★★</span> 5.0 · 200+ Google reviews
             </div>
             <h1 style={sx('font-size:clamp(32px,4.6vw,56px);font-weight:800;letter-spacing:-.01em;margin-bottom:18px;text-wrap:balance')}>Air conditioning & electrical. One licensed team, Brisbane to Gold Coast.</h1>
-            <p style={sx('font-size:clamp(17px,1.6vw,20px);line-height:1.55;color:#E3F0FA;max-width:560px;margin-bottom:28px')}>Supply and installation of split system and ducted air conditioners, plus every electrical job from power points to switchboards. Serving the industry since 2014 with warranties, upfront quotes and no hidden charges.</p>
+            <p style={sx('font-size:clamp(17px,1.6vw,20px);line-height:1.55;color:#fff;max-width:560px;margin-bottom:28px')}>Supply and installation of split system and ducted air conditioners, plus every electrical job from power points to switchboards. Serving the industry since 2014 with warranties, upfront quotes and no hidden charges.</p>
             <div style={sx('display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px')}>
               <QuoteButton className="hv-redd" style={sx('background:#E32027;color:#fff;border:0;border-radius:12px;padding:16px 26px;font-family:var(--font-heading);font-weight:700;font-size:17px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.18)')}>Get a Free Quote</QuoteButton>
               <a href="tel:1300010393" className="hv-mint" style={sx('background:#fff;color:#0E2A47;border-radius:12px;padding:16px 24px;font-family:var(--font-heading);font-weight:700;font-size:17px;display:flex;align-items:center;gap:8px')}>☏ 1300 010 393</a>
             </div>
-            <ul className="lae-checks" style={sx('list-style:none;padding:0;display:grid;gap:8px 18px;font-size:15px;color:#E3F0FA;max-width:520px')}>
+            <ul className="lae-checks" style={sx('list-style:none;padding:0;display:grid;gap:8px 18px;font-size:15px;color:#fff;max-width:520px')}>
               <li style={sx('display:flex;gap:8px;align-items:center')}><span style={sx('color:#9BE04A;font-weight:800')}>✓</span>Warranties & guarantees</li>
               <li style={sx('display:flex;gap:8px;align-items:center')}><span style={sx('color:#9BE04A;font-weight:800')}>✓</span>Financing available</li>
               <li style={sx('display:flex;gap:8px;align-items:center')}><span style={sx('color:#9BE04A;font-weight:800')}>✓</span>Licensed & insured</li>
@@ -53,7 +53,7 @@ export default function Home() {
       {/* THREE PILLARS */}
       <section style={sx('max-width:1220px;margin:0 auto;padding:clamp(48px,6vw,80px) 20px 0')}>
         <div style={sx('text-align:center;max-width:680px;margin:0 auto 36px')}>
-          <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#E32027;margin-bottom:10px')}>What we can offer you</div>
+          <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#D41920;margin-bottom:10px')}>What we can offer you</div>
           <h2 style={sx('font-size:clamp(28px,3.4vw,40px);font-weight:700')}>Fast, reliable electrical and air conditioning services</h2>
         </div>
         <div className="lae-pillars">
@@ -83,7 +83,7 @@ export default function Home() {
       <section style={sx('max-width:1220px;margin:0 auto;padding:clamp(48px,6vw,80px) 20px 0')}>
         <div className="lae-split">
           <div>
-            <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#E32027;margin-bottom:10px')}>One team for everything</div>
+            <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#D41920;margin-bottom:10px')}>One team for everything</div>
             <h2 style={sx('font-size:clamp(28px,3.4vw,40px);font-weight:700;margin-bottom:16px')}>Fewer trades to manage. Excellent results on the table.</h2>
             <p style={sx('color:#3E5166;font-size:17px;margin-bottom:18px')}>Links Air Electrical is not just electricians, we are a full-service provider in both electrical and air conditioning. Whether you&apos;re building, renovating, or just need a quick fix, we&apos;ve got you covered.</p>
             <p style={sx('color:#3E5166;font-size:17px;margin-bottom:24px')}>Most homes need both at some point. Instead of calling multiple trades, we do both in one visit, saving you time and money.</p>
@@ -92,7 +92,7 @@ export default function Home() {
           <div style={sx('display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px')}>
             {WHAT_WE_DO.map((w) => (
               <Link key={w.n} href={w.href} className="hv-bord" style={sx('background:#fff;border:1px solid #E1E8F0;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px;color:#14263A;min-height:104px')}>
-                <span style={sx('width:34px;height:34px;border-radius:9px;background:#EAF3FA;color:#1279BF;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:800;font-size:15px')}>{w.n}</span>
+                <span style={sx('width:34px;height:34px;border-radius:9px;background:#EAF3FA;color:#0F6AA8;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:800;font-size:15px')}>{w.n}</span>
                 <span style={sx('font-weight:700;font-size:15px;line-height:1.3')}>{w.t}</span>
               </Link>
             ))}
@@ -110,7 +110,7 @@ export default function Home() {
             <ul style={sx('list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;font-size:16.5px')}>
               {EXPECT.map((e) => (
                 <li key={e} style={sx('display:flex;gap:12px;align-items:flex-start')}>
-                  <span style={sx('width:24px;height:24px;border-radius:50%;background:#78B72A;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex-shrink:0;margin-top:2px')}>✓</span>
+                  <span style={sx('width:24px;height:24px;border-radius:50%;background:#44800E;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex-shrink:0;margin-top:2px')}>✓</span>
                   {e}
                 </li>
               ))}
@@ -131,7 +131,7 @@ export default function Home() {
       <section style={sx('max-width:1220px;margin:0 auto;padding:clamp(48px,6vw,80px) 20px 0')}>
         <div style={sx('display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:28px')}>
           <div>
-            <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#E32027;margin-bottom:10px')}>Testimonials</div>
+            <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#D41920;margin-bottom:10px')}>Testimonials</div>
             <h2 style={sx('font-size:clamp(28px,3.4vw,40px);font-weight:700')}>Trusted by over 180 reviewers on Google</h2>
           </div>
           <a href="https://www.google.com/maps/place/Links+Air+%26+Electrical/@-27.598581,153.1103469,162123m/data=!3m1!1e3!4m8!3m7!1s0x6b914711e4f75eff:0x5158d09697b56f9b!8m2!3d-27.598581!4d153.1103469!9m1!1b1!16s%2Fg%2F11kf3kd8f9" target="_blank" rel="noopener" className="hv-bord" style={sx('font-weight:700;border:1px solid #D4DEE8;background:#fff;border-radius:10px;padding:11px 16px;color:#14263A')}>View all reviews on Google →</a>
@@ -143,7 +143,7 @@ export default function Home() {
               <blockquote style={sx('margin:0;font-size:16px;color:#2B3F55;flex:1')}>“{t.text}”</blockquote>
               <figcaption style={sx('display:flex;justify-content:space-between;align-items:center;font-size:14px')}>
                 <strong style={sx('color:#14263A')}>{t.name}</strong>
-                <span style={sx('color:#7A8A9C')}>Posted on Google</span>
+                <span style={sx('color:#5F7187')}>Posted on Google</span>
               </figcaption>
             </figure>
           ))}
@@ -158,7 +158,7 @@ export default function Home() {
               <div style={sx('font-family:var(--font-heading);font-weight:800;font-size:clamp(48px,6vw,72px);line-height:1;letter-spacing:-.02em')}>20% OFF</div>
               <div>
                 <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:clamp(20px,2.4vw,26px)')}>Electrical or AC maintenance & repair</div>
-                <div style={sx('color:#FFD9DB;font-size:15px')}>Mention this offer when you book. Leading cooling company serving Australia.</div>
+                <div style={sx('color:#fff;font-size:15px')}>Mention this offer when you book. Leading cooling company serving Australia.</div>
               </div>
             </div>
             <div style={sx('display:flex;gap:10px;flex-wrap:wrap')}>
@@ -172,7 +172,7 @@ export default function Home() {
       {/* GALLERY */}
       <section style={sx('max-width:1220px;margin:0 auto;padding:clamp(48px,6vw,80px) 20px 0')}>
         <div style={sx('text-align:center;max-width:680px;margin:0 auto 28px')}>
-          <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#E32027;margin-bottom:10px')}>Work gallery</div>
+          <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#D41920;margin-bottom:10px')}>Work gallery</div>
           <h2 style={sx('font-size:clamp(28px,3.4vw,40px);font-weight:700')}>Recent installations across Brisbane & the Gold Coast</h2>
         </div>
         <div className="lae-gallery">
@@ -195,7 +195,7 @@ export default function Home() {
       {/* AREAS + FAQ */}
       <section className="lae-split" style={sx('max-width:1220px;margin:0 auto;padding:clamp(48px,6vw,80px) 20px 0')}>
         <div>
-          <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#E32027;margin-bottom:10px')}>Areas we service</div>
+          <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#D41920;margin-bottom:10px')}>Areas we service</div>
           <h2 style={sx('font-size:clamp(26px,3vw,34px);font-weight:700;margin-bottom:14px')}>Local and flexible across South East Queensland</h2>
           <p style={sx('color:#3E5166;margin-bottom:20px')}>Brisbane (North, South, East & West), Gold Coast, Logan & Ipswich, Redlands, Moreton Bay and surrounding suburbs. Not sure if we service your area? Just give us a call.</p>
           <div style={sx('display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px')}>
@@ -207,7 +207,7 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#E32027;margin-bottom:10px')}>FAQs</div>
+          <div style={sx('font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#D41920;margin-bottom:10px')}>FAQs</div>
           <h2 style={sx('font-size:clamp(26px,3vw,34px);font-weight:700;margin-bottom:14px')}>Common questions</h2>
           <div style={sx('display:flex;flex-direction:column;gap:8px')}>
             {HOME_FAQ.map((f) => (
@@ -223,7 +223,7 @@ export default function Home() {
 
       {/* BRANDS */}
       <section style={sx('max-width:1220px;margin:0 auto;padding:clamp(48px,6vw,72px) 20px 0')}>
-        <p style={sx('text-align:center;font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#7A8A9C;margin-bottom:18px')}>We supply, install and service top brands</p>
+        <p style={sx('text-align:center;font-family:var(--font-heading);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#5F7187;margin-bottom:18px')}>We supply, install and service top brands</p>
         <div className="lae-brands">
           {BRANDS.map(([s, a]) => (
             <div key={s} style={sx('background:#fff;border:1px solid #E1E8F0;border-radius:12px;height:72px;display:flex;align-items:center;justify-content:center;padding:12px')}>
@@ -245,7 +245,7 @@ export default function Home() {
           <div style={sx('position:absolute;inset:0;background:radial-gradient(ellipse at 20% 100%,rgba(255,255,255,.12),transparent 55%)')} />
           <div style={sx('position:relative')}>
             <h2 style={sx('font-size:clamp(28px,3.6vw,42px);font-weight:800;margin-bottom:12px')}>Get started today</h2>
-            <p style={sx('color:#E3F0FA;font-size:18px;max-width:600px;margin:0 auto 26px')}>Need reliable electrical and air conditioning services in Brisbane or the Gold Coast? From air conditioning installation to complete electrical upgrades, we&apos;ll get the job done quickly and professionally.</p>
+            <p style={sx('color:#fff;font-size:18px;max-width:600px;margin:0 auto 26px')}>Need reliable electrical and air conditioning services in Brisbane or the Gold Coast? From air conditioning installation to complete electrical upgrades, we&apos;ll get the job done quickly and professionally.</p>
             <div style={sx('display:flex;flex-wrap:wrap;gap:12px;justify-content:center')}>
               <a href="tel:1300010393" style={sx('background:#fff;color:#0E2A47;border-radius:12px;padding:16px 26px;font-family:var(--font-heading);font-weight:700;font-size:17px')}>Call Links Air Electrical</a>
               <QuoteButton className="hv-redd" style={sx('background:#E32027;color:#fff;border:0;border-radius:12px;padding:16px 26px;font-family:var(--font-heading);font-weight:700;font-size:17px;cursor:pointer')}>Request a Free Quote</QuoteButton>

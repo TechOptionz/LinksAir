@@ -67,6 +67,16 @@ the dev server: `NEXT_DIST_DIR=.next-build npm run build`.
   `lib/content.ts`, which would drag the 1.4MB content JSON into the layout chunk.
 - Form submissions currently log to the console and redirect to `/thank-you`
   (identical to the original template). Wire them to an email/CRM endpoint before go-live.
+- SEO plumbing: `app/robots.ts` and `app/sitemap.ts` serve `/robots.txt` and `/sitemap.xml`
+  (every content page and blog post; `/thank-you` is excluded and disallowed). `app/layout.tsx`
+  sets `metadataBase`, a self-referencing canonical on every page, Open Graph / Twitter card tags
+  and a default share image. Absolute URLs come from `lib/url.ts`: `NEXT_PUBLIC_SITE_URL` if set,
+  otherwise Vercel's production URL (which becomes the custom domain automatically once one is
+  attached to the project), otherwise `http://localhost:3000`. The share image is built by
+  `node scripts/og-image.mjs` (1200x630 JPEG from a branded service photo, content-hashed into
+  `public/img/`, recorded in `lib/og-image.json`).
+- `@vercel/speed-insights` is mounted next to `@vercel/analytics` in the root layout; enable
+  Speed Insights on the Vercel project for real-user Core Web Vitals.
 
 ## Service-page copy from the Word documents
 

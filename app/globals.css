@@ -1,7 +1,7 @@
 /* ===== Base styles — copied verbatim from the original template ===== */
 html,body{margin:0;padding:0;background:#F4F7FA;color:#14263A;font-family:var(--font-body),system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
 *{box-sizing:border-box}
-a{color:#1279BF;text-decoration:none}
+a{color:#0F6AA8;text-decoration:none}
 a:hover{color:#0E5F97}
 h1,h2,h3,h4{font-family:var(--font-heading),system-ui,sans-serif;margin:0;line-height:1.15;text-wrap:pretty}
 p{margin:0}
@@ -28,7 +28,7 @@ details summary::-webkit-details-marker{display:none}
 .hv-bord:hover{border-color:#1279BF!important;color:#1279BF!important}
 .hv-navy:hover{background:#14385F!important}
 .hv-lime:hover{color:#9BE04A!important}
-.hv-gd:hover{background:#5F9A1C!important}
+.hv-gd:hover{background:#386A0A!important}
 .hv-b:hover{color:#1279BF!important}
 .hv-card:hover{border-color:#1279BF!important;box-shadow:0 16px 36px rgba(14,42,71,.1)!important;color:#14263A!important}
 .hv-bo:hover{border-color:#1279BF!important}

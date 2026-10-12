@@ -11,11 +11,11 @@ export default function ServiceAreaHub() {
     <div>
       <section style={sx('background:#1279BF;color:#fff')}>
         <div style={sx('max-width:1220px;margin:0 auto;padding:clamp(32px,5vw,64px) 20px')}>
-          <nav aria-label="Breadcrumb" style={sx('font-size:13.5px;color:#C9E2F5;margin-bottom:14px')}>
-            <Link href="/" style={sx('color:#C9E2F5')}>Home</Link> / <span style={sx('color:#fff')}>Service areas</span>
+          <nav aria-label="Breadcrumb" style={sx('font-size:13.5px;color:#fff;margin-bottom:14px')}>
+            <Link href="/" style={sx('color:#fff')}>Home</Link> / <span style={sx('color:#fff')}>Service areas</span>
           </nav>
           <h1 style={sx('font-size:clamp(30px,4.4vw,52px);font-weight:800;margin-bottom:14px')}>Service areas</h1>
-          <p style={sx('font-size:clamp(16px,1.5vw,19px);color:#E3F0FA;max-width:640px')}>Expert electrical and air conditioning services across Brisbane, Gold Coast, Logan, Ipswich, Redlands and Moreton Bay. Local and flexible, with technicians on call 24/7.</p>
+          <p style={sx('font-size:clamp(16px,1.5vw,19px);color:#fff;max-width:640px')}>Expert electrical and air conditioning services across Brisbane, Gold Coast, Logan, Ipswich, Redlands and Moreton Bay. Local and flexible, with technicians on call 24/7.</p>
         </div>
       </section>
       <section style={sx('max-width:1220px;margin:0 auto;padding:clamp(32px,5vw,64px) 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px')}>
