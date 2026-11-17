@@ -10,6 +10,9 @@
 /* ============ site feature flags (same defaults as the original) ============ */
 export const SITE = { showOffer: true, stickyBar: true, chatbot: true };
 
+/* Base URL of the AI reply-assistant settings API (n8n webhooks) behind the private /ai-settings page. */
+export const AI_SETTINGS_API = 'https://automation.keyob.com/webhook';
+
 export type NavChild = { label: string; href: string; slug: string };
 export type NavGroup = { label: string; href: string | null; children: NavChild[] };
 export type NavItem = { label: string; href: string; key?: string; groups?: NavGroup[] };

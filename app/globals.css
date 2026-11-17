@@ -97,3 +97,7 @@ details[open]>summary .lae-plus{transform:rotate(45deg)}
 
 /* Lock page scroll behind the mobile menu / quote drawer */
 body.lae-lock{overflow:hidden}
+
+/* owner tools (/ai-settings): section index + editors, single column until desktop */
+.lae-ai-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:32px;align-items:start}
+@media (min-width: 1024px){.lae-ai-grid{grid-template-columns:260px minmax(0,1fr)}}
