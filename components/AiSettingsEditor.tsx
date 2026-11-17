@@ -1,14 +1,15 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { sx } from '@/lib/sx';
 import { AI_SETTINGS_API } from '@/lib/site';
+import { MarkdownEditor } from './MarkdownEditor';
 
 type DocKey = 'kb' | 'rules';
 type Doc = { content: string; updated_at: string; updated_by: string };
 type Docs = Record<DocKey, Doc>;
-type Part = { id: string; title: string; text: string };
+type Part = { id: string; title: string; heading: string; body: string };
 
 // The knowledge base is one markdown document split on "## N. Title" headings; the reply rules on their
 // capital-letter headings. Each part is edited on its own, then the whole document is put back together in
@@ -40,12 +41,18 @@ function splitDoc(text: string, re: RegExp, prefix: string): { preamble: string;
   const chunks = text.split(re);
   const preamble = chunks.length && !re.test(chunks[0]) ? chunks[0] : '';
   const body = preamble ? chunks.slice(1) : chunks;
-  const parts = body.filter((c) => c.trim()).map((c, i) => ({ id: `${prefix}-${i}`, title: c.split('\n')[0].replace(/^#+\s*/, '').trim(), text: c }));
+  const parts = body
+    .filter((c) => c.trim())
+    .map((c, i) => {
+      const nl = c.indexOf('\n');
+      const heading = nl < 0 ? c : c.slice(0, nl);
+      return { id: `${prefix}-${i}`, title: heading.replace(/^#+\s*/, '').trim(), heading, body: nl < 0 ? '' : c.slice(nl + 1).replace(/^\n+/, '') };
+    });
   return { preamble, parts };
 }
 
 function joinDoc(preamble: string, parts: Part[]): string {
-  return [preamble.replace(/\s+$/, ''), ...parts.map((p) => p.text.replace(/\s+$/, ''))].filter(Boolean).join('\n\n') + '\n';
+  return [preamble.replace(/\s+$/, ''), ...parts.map((p) => (p.heading + '\n\n' + p.body).replace(/\s+$/, ''))].filter(Boolean).join('\n\n') + '\n';
 }
 
 const clean = (t: string) => t.replace(/^\d+\.\s*/, '');
@@ -59,6 +66,9 @@ export function AiSettingsEditor() {
   const [name, setName] = useState('');
   const [status, setStatus] = useState<{ text: string; ok: boolean } | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
+  // sections the owner has typed in since the last save (the editor may reformat Markdown slightly, so text comparison is not used)
+  const [touched, setTouched] = useState<Set<string>>(new Set());
+  const [asText, setAsText] = useState<Set<string>>(new Set());
 
   const fetchDocs = useCallback(async (): Promise<Docs> => {
     const r = await fetch(`${url}?format=json`, { cache: 'no-store' });
@@ -84,14 +94,7 @@ export function AiSettingsEditor() {
     };
   }, [url, fetchDocs]);
 
-  const saved = useMemo(
-    () => ({ kb: docs ? splitDoc(docs.kb.content, KB_SPLIT, 'kb') : null, rules: docs ? splitDoc(docs.rules.content, RULES_SPLIT, 'rules') : null }),
-    [docs],
-  );
-  const isDirty = (doc: DocKey, part: Part) => {
-    const base = saved[doc]?.parts.find((p) => p.id === part.id);
-    return !base || base.text !== part.text;
-  };
+  const isDirty = (_doc: DocKey, part: Part) => touched.has(part.id);
 
   const save = async (doc: DocKey, part: Part) => {
     if (!url) return;
@@ -103,6 +106,11 @@ export function AiSettingsEditor() {
       const d = (await r.json()) as { ok?: boolean; error?: string };
       if (!r.ok || !d.ok) throw new Error(d.error ?? `${r.status}`);
       setStatus({ text: `"${clean(part.title)}" saved. The next email the assistant answers will use it.`, ok: true });
+      setTouched((t) => {
+        const n = new Set(t);
+        n.delete(part.id);
+        return n;
+      });
       setDocs(await fetchDocs());
     } catch (e) {
       setStatus({ text: `Not saved: ${e instanceof Error ? e.message : 'unknown error'}`, ok: false });
@@ -111,10 +119,18 @@ export function AiSettingsEditor() {
     }
   };
 
-  const update = (doc: DocKey, id: string, text: string) => {
+  const update = (doc: DocKey, id: string, body: string) => {
     const setter = doc === 'kb' ? setKb : setRules;
-    setter((s) => ({ ...s, parts: s.parts.map((p) => (p.id === id ? { ...p, text } : p)) }));
+    setter((s) => ({ ...s, parts: s.parts.map((p) => (p.id === id ? { ...p, body } : p)) }));
+    setTouched((t) => (t.has(id) ? t : new Set(t).add(id)));
   };
+  const toggleText = (id: string) =>
+    setAsText((t) => {
+      const n = new Set(t);
+      if (n.has(id)) n.delete(id);
+      else n.add(id);
+      return n;
+    });
 
   if (!url) return <p style={sx('color:#C4161C')}>This page needs the private link you were given (it ends with ?key=…).</p>;
   if (!docs) return <p style={sx(status && !status.ok ? 'color:#C4161C' : 'color:#5F7187')}>{status?.text ?? 'Loading…'}</p>;
@@ -129,7 +145,8 @@ export function AiSettingsEditor() {
     const usedByAi = doc === 'rules' || KB_USED_BY_AI.includes(num);
     const hint = doc === 'kb' ? KB_HINTS[num] : undefined;
     const dirty = isDirty(doc, part);
-    const rows = Math.min(40, Math.max(8, part.text.split('\n').length + 1));
+    const rows = Math.min(40, Math.max(8, part.body.split('\n').length + 1));
+    const text = asText.has(part.id);
     return (
       <article id={part.id} key={part.id} style={{ ...CARD, scrollMarginTop: 20 }}>
         <div style={sx('display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap;margin-bottom:14px')}>
@@ -144,12 +161,19 @@ export function AiSettingsEditor() {
             {usedByAi ? 'Read by the assistant' : 'For your team'}
           </span>
         </div>
-        <textarea style={TA} rows={rows} spellCheck={false} value={part.text} onChange={(e) => update(doc, part.id, e.target.value)} aria-label={clean(part.title)} />
+        {text ? (
+          <textarea style={TA} rows={rows} spellCheck={false} value={part.body} onChange={(e) => update(doc, part.id, e.target.value)} aria-label={clean(part.title)} />
+        ) : (
+          <MarkdownEditor value={part.body} onChange={(md) => update(doc, part.id, md)} label={clean(part.title)} />
+        )}
         <div style={sx('display:flex;align-items:center;gap:14px;margin-top:12px;flex-wrap:wrap')}>
           <button type="button" className={dirty ? 'hv-redd' : undefined} style={dirty && busy === null ? BTN : BTN_OFF} disabled={busy !== null || !dirty} onClick={() => void save(doc, part)}>
             {busy === part.id ? 'Saving…' : dirty ? 'Save changes' : 'Saved'}
           </button>
           {dirty ? <span style={sx('font-size:13px;color:#C4161C;font-weight:700')}>Unsaved changes</span> : null}
+          <button type="button" onClick={() => toggleText(part.id)} className="hv-bd" style={sx('margin-left:auto;background:none;border:0;padding:0;color:#5F7187;font-size:13px;cursor:pointer;text-decoration:underline')}>
+            {text ? 'Back to the editor' : 'Edit as text'}
+          </button>
         </div>
       </article>
     );

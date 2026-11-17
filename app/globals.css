@@ -101,3 +101,18 @@ body.lae-lock{overflow:hidden}
 /* owner tools (/ai-settings): section index + editors, single column until desktop */
 .lae-ai-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:32px;align-items:start}
 @media (min-width: 1024px){.lae-ai-grid{grid-template-columns:260px minmax(0,1fr)}}
+
+/* rich text editor on /ai-settings (TipTap): reads and writes Markdown */
+.lae-rte{min-height:180px;padding:14px 16px;outline:none;font-size:15px;line-height:1.6;color:#14263A}
+.lae-rte p{margin:0 0 10px}
+.lae-rte h2,.lae-rte h3,.lae-rte h4{margin:14px 0 8px;font-weight:700}
+.lae-rte h3{font-size:18px}.lae-rte h4{font-size:16px}
+.lae-rte ul,.lae-rte ol{margin:0 0 10px;padding-left:22px}
+.lae-rte li{margin:2px 0}
+.lae-rte table{border-collapse:collapse;width:100%;margin:8px 0 14px;font-size:14px;table-layout:fixed}
+.lae-rte th,.lae-rte td{border:1px solid #D4DEE8;padding:6px 8px;vertical-align:top;min-width:60px;overflow-wrap:anywhere}
+.lae-rte th{background:#F0F6FB;font-weight:700;text-align:left}
+.lae-rte .selectedCell{background:#EAF7DC}
+.lae-rte a{color:#0F6AA8;text-decoration:underline}
+.lae-rte code{background:#F0F6FB;padding:1px 4px;border-radius:4px;font-size:13px}
+.lae-rte hr{border:0;border-top:1px solid #E1E8F0;margin:14px 0}
