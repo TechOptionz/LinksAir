@@ -116,3 +116,10 @@ body.lae-lock{overflow:hidden}
 .lae-rte a{color:#0F6AA8;text-decoration:underline}
 .lae-rte code{background:#F0F6FB;padding:1px 4px;border-radius:4px;font-size:13px}
 .lae-rte hr{border:0;border-top:1px solid #E1E8F0;margin:14px 0}
+
+/* owner tools: the section index is only sticky beside the editors on desktop; on phones it sits above them and must not overlay them */
+.lae-ai-aside{display:flex;flex-direction:column;gap:16px;position:static}
+@media (min-width: 1024px){.lae-ai-aside{position:sticky;top:20px}}
+/* "Save all" bar: above the site's fixed Call/Quote bar on phones */
+.lae-ai-savebar{position:sticky;bottom:92px;margin-top:24px;display:flex;justify-content:center;pointer-events:none;z-index:60}
+@media (min-width: 1024px){.lae-ai-savebar{bottom:12px}}

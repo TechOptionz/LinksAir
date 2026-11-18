@@ -372,7 +372,7 @@ export function AiSettingsEditor() {
       </div>
 
       <div className="lae-ai-grid">
-        <aside style={sx('position:sticky;top:20px;display:flex;flex-direction:column;gap:16px')}>
+        <aside className="lae-ai-aside">
           <label style={{ ...CARD, display: 'grid', gap: 6 }}>
             <span style={LABEL}>Your name</span>
             <input style={INPUT} value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. Zam" />
@@ -493,7 +493,7 @@ export function AiSettingsEditor() {
 
       {/* mobile / global save bar */}
       {unsaved.length ? (
-        <div style={sx('position:sticky;bottom:12px;margin-top:24px;display:flex;justify-content:center;pointer-events:none')}>
+        <div className="lae-ai-savebar">
           <div style={sx('pointer-events:auto;background:#14263A;color:#fff;border-radius:14px;padding:10px 12px 10px 16px;display:flex;gap:12px;align-items:center;box-shadow:0 16px 40px rgba(8,30,55,.3);font-size:14px')}>
             {unsaved.length} unsaved change{unsaved.length === 1 ? '' : 's'}
             <button type="button" className="hv-redd" style={{ ...BTN, padding: '9px 16px', fontSize: 14 }} disabled={busy !== null} onClick={() => void saveAll()}>
