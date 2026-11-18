@@ -121,5 +121,8 @@ body.lae-lock{overflow:hidden}
 .lae-ai-aside{display:flex;flex-direction:column;gap:16px;position:static}
 @media (min-width: 1024px){.lae-ai-aside{position:sticky;top:20px}}
 /* "Save all" bar: above the site's fixed Call/Quote bar on phones */
-.lae-ai-savebar{position:sticky;bottom:92px;margin-top:24px;display:flex;justify-content:center;pointer-events:none;z-index:60}
-@media (min-width: 1024px){.lae-ai-savebar{bottom:12px}}
+.lae-ai-savebar{position:sticky;bottom:92px;margin-top:24px;display:flex;justify-content:flex-start;pointer-events:none;z-index:90}
+@media (min-width: 1024px){.lae-ai-savebar{bottom:12px;justify-content:center}}
+/* wide price tables scroll sideways inside the editor instead of squeezing on phones */
+.lae-rte{overflow-x:auto}
+.lae-rte table{table-layout:auto;min-width:560px}
